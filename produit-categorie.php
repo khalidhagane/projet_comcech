@@ -12,6 +12,7 @@ require_once 'header.php';
   </form>
     </div>
 
+
 <div class="container mt-5">
     <div class="row gap-4 d-flex justify-content-center px-4 ">
 
@@ -25,7 +26,7 @@ require_once 'header.php';
 
         <div class="px-2 pb-3 d-flex flex-column align-items-center ">
             <h3 class="">motor énergé</h3>
-            <p class=" text-center"> Compactage, terrassement et matériel terrassement et matériel de chantier </p>
+            <p class=" text-center"> Compactage, terrassement  et matériel .terrassement et matériel de chantier </p>
             <button type="button" class="btn btn-border-comcech btn-outline-primary rounded-pill px-5">Voir produit</button>
         </div>
     </div>
