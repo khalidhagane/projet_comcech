@@ -1,101 +1,51 @@
 <?php
 require_once 'hed.php';
-require_once 'header.php';
 ?>
 <body>
 <main class="vh-100 ">
-    <nav class="px-4 py-1 navbar bg-info d-flex flex-row justify-content-between px-2">
-        <div class="d-flex flex-row gap-3">
-            <div>
-                <i class="fas fa-list-alt"></i>
-                <span>produit</span>
-            </div>
-            
-            <div class="">
-                <i class="fas fa-search"></i>
-                <span>recherche</span>
-                
-            </div>
-        </div>
+<nav class="navbar navbar-expand-lg py-0 color_comcech navbar-light bg-light">
 
-        <div class="d-flex flex-row justify-content-center w-25  h-25" >
-            <img class="w-25  h-25" src="images/log.png" alt="logo">
-            
-        </div>
-        
-
-        <div class="d-flex flex-row  gap-3">
-            <div class=>
-                <i class="fas fa-user"></i>
-                <span>login</span>
-            </div>
-            
-            <div>
-                <i class="fas fa-shopping-cart"></i>
-                <span>panier</span>
-            </div>
-        </div>
-
-</nav> 
-
-    
-
-<!-- <div class="collapse" id="navbarToggleExternalContent">
-  <div class="bg-dark p-4">
-    <h5 class="text-white h4">Collapsed content</h5>
-    <span class="text-muted">Toggleable via the navbar brand.</span>
-  </div>
-</div>
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<div class="container-fluid   ">
+    <a class="navbar-brand w-90" href="#">
+        <img src="images/log.png" alt="brand" style=" height: 45px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
-  </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link text-dark hover-navbar" aria-current="page" href="#"><i class="fas fa-home me-1"></i>Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-dark hover-navbar " href="#"><i class="fas fa-user me-1"></i>LOGIN</a>
+            </li>
+            <li class="nav-item ">
+            <a class="nav-link text-dark hover-navbar " href="#"><i class="fas fa-shopping-cart me-1 "></i>PANIER</a>
+            </li>
+            <li class="nav-item dropdown ">
+            <a class="nav-link  dropdown-toggle text-dark hover-navbar " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false><i class="fas fa-list-alt me-1" ></i>PRODUIT</a>
+
+            
+          <ul class="dropdown-menu drop-navbar  " aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item fw-bolder text-white hover-drop" href="#">inerge</a></li>
+            <li><a class="dropdown-item  fw-bolder text-white hover-drop" href="#">sodage</a></li>
+            <li><a class="dropdown-item fw-bolder text-white hover-drop" href="#">traveux public</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">traveux public</a></li>
+          </ul>
+        </li>
+            
+            
+            
+        </ul>
+    
+    </div>
+</div>
 </nav>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
 
-  <div class="collapse" id="navbarToggleExternalContent">
-  <div class="bg-dark p-4">
-    <h5 class="text-white h4">Collapsed content</h5>
-    <span class="text-muted">Toggleable via the navbar brand.</span>
-  </div>
-</div>
-
-  
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <a class="navbar-brand" href="#">Navbar</a>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link disabled" href="#"  aria-disabled="true">Disabled</a>
-        </li> -->
-      <!-- </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav> --> 
 
 </body>
 </html>

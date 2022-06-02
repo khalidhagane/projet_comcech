@@ -3,22 +3,77 @@
     margin: 0px;
     padding: 0px;
 }
+.color_comcech_text{
+    color: #02ACDF !important; 
+}
+.color_comcech{
+    background: #02ACDF !important; 
+}
+.color_navbar2{
+    background: #4a7b89 !important; 
+}
+
+.hover-navbar:hover{
+    color: white !important;
+}
+
+ul.drop-navbar {
+    left: -58px !important;
+    background: #02acdf9d !important;
+}
+
+.hover-drop:hover{
+    color: black !important;
+    font-weight: bold;
+}
 
 .image_daccueil{
     background-image: url("images/trax.jpg");
     background-size: cover;
-    /* height: 100vh;  */
 }
 
 .search-btn:hover{
     color: #fafafa !important;
     background: #02ACDF ; 
-   
+}
+.btn:hover{
+    background: #02ACDF !important;
+    color: #fafafa !important;
+}
+.btn-border-comcech{
+    border-color: #02ACDF !important ;
+    color: #02ACDF !important ;
+}
+.color_footer{
+    background: #2F333A !important;
+}
+footer a{
+    color: #02ACDF !important ;
+}
+.bg-price{
+    width: 40%;
+    height: 40px;
+    background-image: url(images/bnr2.png) !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.div-login{
+    display: inline !important;
+}
+
+@media screen and (max-width: 880px){
+.div-login{
+    display: none !important;
+}
+form{
+    
+}
+.div-signup{
+    
+}
 }
 
 
-.color_comcech{
-    color: #02ACDF !important;
-}
+
 
 
