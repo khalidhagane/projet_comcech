@@ -57,20 +57,21 @@ footer a{
     background-size: contain;
     background-repeat: no-repeat;
 }
-.div-login{
+/* .div-login{
     display: inline !important;
-}
+} */
 
 @media screen and (max-width: 880px){
-.div-login{
+/* .div-login{
     display: none !important;
+} */
+.form-signup{
+    width:95% !important;
+    /* height:0% !important; */
 }
-form{
-    
-}
-.div-signup{
-    
-}
+/* .div-signup{
+    height:0px !important;
+} */
 }
 
 

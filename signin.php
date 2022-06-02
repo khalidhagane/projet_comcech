@@ -14,17 +14,15 @@ require_once 'header.php';
                     . Aut atque reprehenderit repudiandae sed neque dolorem!
                 </p>
                     <div class="d-flex flex-column align-items-center gap-3">
-                    <button type="submit" class="btn bg-white text-info rounded-pill px-3">SIGNUP WITH GOOGLE</button>
-                    <button type="submit" class="btn bg-white text-info rounded-pill px-3">SIGNUP WITH Facebook</button>
+                    <button type="submit" class="btn bg-white text-info rounded-pill px-3">SIGNIN WITH GOOGLE</button>
+                    <button type="submit" class="btn bg-white text-info rounded-pill px-3">SIGNIN WITH Facebook</button>
                     </div>
             </div>
 
             <form class="card border-0 w-50 form-signup d-flex p-2 px-md-5">
-                    <span class="fs-2 text-center pb-4">SIGN UP</span>
+                    <span class="fs-2 text-center pb-4">SIGN IN</span>
 
-                <div class="mb-3 ">
-                    <input type="name" class="form-control " id="username" placeholder="Username" aria-describedby="emailHelp">
-                </div>
+                
                 
                 <div class="mb-3">
                     <input type="email" class="form-control" id="email" placeholder="Email"  aria-describedby="emailHelp">
@@ -33,15 +31,13 @@ require_once 'header.php';
                 <div class="mb-3">
                     <input type="password" class="form-control" id="password" placeholder="Password" >
                 </div>
-                <div class="mb-3">
-                    <input type="password" class="form-control" id="password2" placeholder="Password" >
-                </div>
+                
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
-                <button type="submit" class="btn btn-border-comcech ">SIGN UP</button>
-                <span class="pt-3">Already have an account. <a class="text-info" href="#">SIGN IN</a>?</span>
+                <button type="submit" class="btn btn-border-comcech ">SIGN IN</button>
+                <span class="pt-3">Already have an account. <a class="text-info" href="#">SIGN UP</a>?</span>
             </form>
         </div>
     </div>
