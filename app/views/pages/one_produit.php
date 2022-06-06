@@ -1,13 +1,16 @@
+
 <?php
-require_once 'hed.php';
-require_once 'header.php';
+
+require_once APPROOT.'/views/inc/head.php';
+require_once APPROOT.'/views/inc/navbar.php';
 ?>
-<div class=" container w-100 h-100 d-flex  justify-content-center align-items-center">
-    <div class=" card w-md-50 w-lg-50 h-75 w-sm-100  d-flex  flex-row p-3 ">
-        <div class="h-50   d-flex flex-column  align-items-center">
-            <h1 class="w-50  " >groupe</h1>
-            <p class="w-50  " >groupe 5000 V</p>
-            <img class="w-50  " src="images/groupe.png" alt="photo">
+
+<div class=" container w-100 pt-5 d-flex  justify-content-center align-items-center">
+    <div class=" card w-md-50 w-lg-50 h-75 w-sm-100  d-flex  flex-row flex-wrap  border-0 shadow ">
+        <div class=" w-50 d-flex flex-column  align-items-center">
+            <span class=" fs-2 pb-5 fw-bold  text-center" >motor electrogen</span>
+            <!-- <p class="w-50  " >groupe 5000 V</p> -->
+            <img class="w-50  " src="<?=URLROOT?>/img/images/groupe.png" alt="photo">
         </div>
         <div class=" ">
             <div>
@@ -24,12 +27,17 @@ require_once 'header.php';
             <span>consomation :</span><span> 12 l/h</span><br>
             <span>sortie alternatif :</span><span> 12h</span><br>
             <div>
-            <span class="">tarif : </span><span> 12h</span><br>
+            <span class=" py-2 fs-4 fw-bolder">tarif :</span><span class=" py-2 fs-4 fw-bolder"> 100 dh/jour</span><br>
             </div>
             <div class="py-2 d-flex  justify-content-center">
-            <button type="ACHETE" class="btn btn-border-comcech rounded-pill px-5 ">ACHETE</button>
+            <button type="ACHETE" class=" w-100 btn btn-border-comcech rounded px-5 ">ACHETE</button>
             </div>
             
         </div>
     </div>
 </div>
+</main>
+<?php
+
+require_once APPROOT.'/views/inc/footer_script.php';
+?>
