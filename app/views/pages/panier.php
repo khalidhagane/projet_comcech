@@ -8,7 +8,7 @@ require_once APPROOT.'/views/inc/navbar.php';
     <div class="h-25 d-flex flex-row flex-wrap gap-3 justify-content-evenly ">
             <div class="  card  shadow border-0" style="width: 600px;">
                 <div class="pt-2">
-                <span class="ps-3   ">panier:1</span><hr class="mt-2">
+                    <span class="ps-3   ">panier:1</span><hr class="mt-2">
                 </div>
                 
                 <div class="d-flex ">
@@ -42,7 +42,7 @@ require_once APPROOT.'/views/inc/navbar.php';
                 </div>
                 <hr class="my-3" >
                 <div class="d-flex justify-content-center ">
-                <button type="button" class="btn btn-border-comcech btn-outline-primary  px-5 ">commander</button>
+                    <button type="button" class="btn btn-border-comcech btn-outline-primary  px-5 ">commander</button>
                 </div>
 
 

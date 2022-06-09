@@ -23,7 +23,7 @@ require_once APPROOT.'/views/inc/navbar.php';
                     <span class="fs-2 text-center pb-4">SIGN UP</span>
 
                 <div class="mb-3 ">
-                    <input type="name" class="form-control " id="username" placeholder="Username" >
+                    <input type="text" class="form-control " id="username" placeholder="Username" >
                 </div>
                 
                 <div class="mb-3">

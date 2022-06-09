@@ -26,7 +26,7 @@ require_once APPROOT.'/views/inc/navbar.php';
                 
                 
                 <div class="mb-3">
-                    <input type="text" class="form-control" id="text" placeholder="Email ou Telephone"  aria-describedby="emailHelp">
+                    <input type="text" class="form-control" id="text" placeholder="Email ou Telephone"  >
                     
                 </div>
                 <div class="mb-3">

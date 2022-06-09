@@ -27,7 +27,7 @@
 
       // Instantiate controller class
       $this->currentController = new $this->currentController;
-
+//$this->currentController => probrtes type object 
       // Check for second part of url
       if(isset($url[1])){
         // Check to see if method exists in controller
@@ -40,6 +40,12 @@
 
       // Get params
       $this->params = $url ? array_values($url) : [];
+      // if($this->params == $url){
+      //   $this->params = array_values($url);
+      
+      // }else{
+      //   $this->params=[];
+      // }
 
       // Call a callback with array of params
       call_user_func_array([$this->currentController, $this->currentMethod], $this->params);

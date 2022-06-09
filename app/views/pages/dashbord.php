@@ -3,7 +3,7 @@
 require_once APPROOT.'/views/inc/head.php';
 
 ?>
-<div class="container-fluid">
+    <div class="container-fluid">
         <div class="row flex-nowrap">
             <!-- asied -->
             <?php
@@ -14,11 +14,11 @@ require_once APPROOT.'/views/inc/head.php';
             <!-- asied -->
             <div class="col px-0">
                 <!-- nnavbar -->
-            <?php 
-            // include 'navbar.php' 
-            require_once APPROOT.'/views/inc/navbar_dashbord.php';
-            // require_once 'header.php';
-            ?>
+                <?php 
+                // include 'navbar.php' 
+                require_once APPROOT.'/views/inc/navbar_dashbord.php';
+                // require_once 'header.php';
+                ?>
                 <!-- nnavbar -->
                 <div class="d-flex flex-wrap justify-content-around gap-3 pt-5">
                 
@@ -27,10 +27,12 @@ require_once APPROOT.'/views/inc/head.php';
 
                         <div class="card-body">
                             
-                        <i class="fas fa-forklift h3 text-info"></i>
+                            <i class="fas fa-forklift h3 text-info"></i>
                             <p class="text-secondary"><?php /* echo $_SESSION['email'] */ ?>les produits</p>
                         
-                            <div class='float-end fw-bolder fs-3'> 444 </div>
+                            <div class='float-end fw-bolder fs-3'>
+                                 444 
+                            </div>
                         
                         </div>
                     </div>

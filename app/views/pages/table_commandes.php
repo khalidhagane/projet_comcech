@@ -39,12 +39,14 @@ require_once APPROOT.'/views/inc/head.php';
                                     <table class="table  table-borderless ">
                                         <thead>
                                             <tr class="text-capitalize  ">
-                                                <th  style="visibility: hidden;" >a</th>
-                                                <th class="text-muted h6 ">Name produit</th>
-                                                <th class=" text-muted h6">Nomper</th>
-                                                <th class=" text-muted h6">Name client</th>
-                                                <th class="text-muted h6">Address</th>
-                                                <th class=" text-muted h6">Tele </th>
+                                                
+                                                <th class="text-muted h6 ">image</th>
+                                                <th class=" text-muted h6">produit</th>
+                                                <th class=" text-muted h6">quantité</th>
+                                                <th class="text-muted h6">client</th>
+                                                <th class=" text-muted h6">address</th>
+                                                <th class=" text-muted h6">phone</th>
+                                                <th class=" text-muted h6">prix</th>
                                                 <th style="display: none;">a</th>
                                                 <th style="display: none;">a</th>
                                             </tr>
@@ -52,84 +54,44 @@ require_once APPROOT.'/views/inc/head.php';
 
                                         <tbody>                                              
                                         
-                                              
+                                        <tbody>
+                                        <?php
+                                        foreach($data as $commande){
+                                            ?>
+                                            <tr>
+                                                <td><?= $commande->image ?></td>
+                                                <td><?= $commande->produit ?></td>
+                                                <td><?= $commande->quantite?></td>
+                                                <td><?= $commande->client ?></td>
+                                                <td><?= $commande->address?></td>
+                                                <td><?= $commande->phone ?></td>
+                                                <td><?= $commande->prix ?></td>
+                                                <td><a href='<?=URLROOT?>/CommandeController/update_produit/<?php echo $commande->id;?>'><i class="fal fa-pen fs-6 text-info"></i></a></td>
+                                                <td><a href='<?=URLROOT?>/ComanndeController/delete_produit/<?php echo $commande->id;?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>
+                                            </tr>
+                                            <?php
+                                        }
+                                        ?>
+                                    </tbody>
 
 
-                                                <?php
-
-
-                                                
-
-                                                    //  
-                                                    ?>
-                                                        <tr class="bg-white ">
+                                               
+                                                        <!-- <tr class="bg-white ">
                                                     <td><img src="<?= URLROOT;?>/img/images/groupe.png" width="65" alt="image représente étudiants"></td>
                                                     <td> motor</td>
                                                     <td> 1</td>
                                                     <td> khalid hagane</td>
                                                     <td> hay el nnahda rue 10 N 30 youssoufia</td>
-                                                    <td> 0626900075</td>
+                                                    <td> 0626900075</td> -->
 
-                                                    <td><a href='update.php?id=<?php echo $row['id'];?>'><i class="fas fa-ban fs-5  text-info"></i></a></td>
+                                                    <!-- <td><a href='update.php?id=<?php echo $row['id'];?>'><i class="fas fa-ban fs-5  text-info"></i></a></td>
                                                     <td><a href='delete.php?id=<?php echo $row['id'];?>'> <i class="far fa-check-circle fs-5 text-info"></i> </a></td>
                                                     
-                                                    </tr>
+                                                     </tr> -->
 
-                                                    <?php
-                                                   
+                                    
 
-                                            // }   
-
-
-
-
-
-
-                                                //  include 'tableux_students.php'
-
-                                              //   $array = file_get_contents('tableau_student.json');
-                                              //   $student = json_decode( $array,true) 
-
-                                            //    foreach ($student as $TB ){
-                            
-                                            //    if($TB['name']=='khalid'){
-
-                                            // echo ' <tr class="bg-white ">
-                                            // <td  ><img src="image/student.jpg" width="65" alt="image représente étudiants"> </td>
-                                            // <td>'.$TB['name'].'</td>
-                                            // <td >'.$TB['email'].'</td>
-                                            // <td >'.$TB['phone'].'</td>
-                                            // <td>'.$TB['enroll_number'].'</td>
-                                            // <td >'.$TB['date_of_addmision'].'</td>
-                                            // <td><a href="#"><i class="fal fa-pen fs-6 text-info"></i></a></td>
-                                            // <td><a href="#"><i class="fal fa-trash fs-6 text-info"></i></a></td>
-                                            // </tr>';
-                                            // //   }
-                                            // }  
-                                            
-                                            
-
-                                        //          include 'tableux_students.php';
-
-                                        //          $array = file_get_contents('tableau_student.json');
-                                        //          $student = json_decode( $array,true) ;
-
-
-                                        // for ($i = 0; $i < count($student);$i++) {
-                                        //     echo'<tr class="bg-white ">';
-                                        //     echo '<td  ><img src="image/student.jpg" width="65" alt="image représente étudiants"> </td>';
-                                        //     echo '<td>'. $student[$i]['name'].'</td>';
-                                        //     echo '<td>'. $student[$i]['email'] .'</td>';
-                                        //     echo '<td>'. $student[$i]['phone'] .'</td>';
-                                        //     echo '<td>'. $student[$i]['enroll_number'] .'</td>';
-                                        //     echo '<td>'. $student[$i]['date_of_addmision'] .'</td>' ;
-                                        //     echo ' <td><a href="#"><i class="fal fa-pen fs-6 text-info"></i></a></td>';
-                                        //     echo '<td><a href="#"><i class="fal fa-trash fs-6 text-info"></i></a></td>';
-                                        //     echo '</tr>';
-                                        // }
-                                            ?>
-
-                                        </tbody>
+                                        
                                     </table>
                                 </div>
                             </div>

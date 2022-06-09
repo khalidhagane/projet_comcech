@@ -4,9 +4,11 @@ require_once APPROOT.'/views/inc/head.php';
 
 ?>
 <div class="container-fluid">
+
         <div class="row flex-nowrap">
             <!-- asied -->
             <?php
+            
             //  include 'asiedbar.php'
             require_once APPROOT.'/views/inc/asiedbar.php';
             ?>
@@ -26,7 +28,7 @@ require_once APPROOT.'/views/inc/head.php';
                             <div class="d-flex align-items-center">
                                 <i class="far  fa-sort me-3 fs-6 text-info "></i>
                                 
-                                    <a href="insert.php"  class=" btn btn-info  text-white text-uppercase mx-4 py-2 " >
+                                    <a href="<?=URLROOT?>/pages/ajoute_produit"  class=" btn btn-info  text-white text-uppercase mx-4 py-2 " >
                                         add new produit
                                     </a> 
                                 
@@ -36,15 +38,52 @@ require_once APPROOT.'/views/inc/head.php';
                         
                             <div class="container ">
                                 <div class="table-responsive-sm table-responsive-md  px-4">
-                                    <table class="table  table-borderless ">
+
+
+                                <table class="table  table-borderless ">
                                         <thead>
                                             <tr class="text-capitalize  ">
-                                                <th  style="visibility: hidden;" >a</th>
+                                                <th class="text-muted h6 ">image</th>
                                                 <th class="text-muted h6 ">produit</th>
-                                                <th class=" text-muted h6">poit</th>
-                                                <th class=" text-muted h6">voltage</th>
+                                                <th class=" text-muted h6">poid</th>
+                                                <th class=" text-muted h6">tension</th>
                                                 <th class="text-muted h6">puissance</th>
-                                                <th class=" text-muted h6">la longeur</th>
+                                                <th class=" text-muted h6">longueur</th>
+                                                <th class=" text-muted h6">prix</th>
+                                                <th style="display: none;">a</th>
+                                                <th style="display: none;">a</th>
+                                            </tr>
+                                        </thead>
+                                    <tbody>
+                                        <?php
+                                        foreach($data as $produit){
+                                            ?>
+                                            <tr>
+                                                <td><?= $produit->image ?></td>
+                                                <td><?= $produit->produit ?></td>
+                                                <td><?= $produit->poid ?></td>
+                                                <td><?= $produit->tension?></td>
+                                                <td><?= $produit->puissance ?></td>
+                                                <td><?= $produit->longueur?></td>
+                                                <td><?= $produit->prix ?></td>
+                                                <td><a href='<?=URLROOT?>/ProduitController/update_produit/<?php echo $produit->id;?>'><i class="fal fa-pen fs-6 text-info"></i></a></td>
+                                                <td><a href='<?=URLROOT?>/ProduitController/delete_produit/<?php echo $produit->id;?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>
+                                            </tr>
+                                            <?php
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
+                                    <!-- <table class="table  table-borderless ">
+                                        <thead>
+                                            <tr class="text-capitalize  ">
+                                                <th class="text-muted h6 ">image</th>
+                                                <th class="text-muted h6 ">produit</th>
+                                                <th class=" text-muted h6">poid</th>
+                                                <th class=" text-muted h6">tension</th>
+                                                <th class="text-muted h6">puissance</th>
+                                                <th class=" text-muted h6">longueur</th>
+                                                <th class=" text-muted h6">prix</th>
                                                 <th style="display: none;">a</th>
                                                 <th style="display: none;">a</th>
                                             </tr>
@@ -69,7 +108,8 @@ require_once APPROOT.'/views/inc/head.php';
                                                     <td> 380 V</td>
                                                     <td> 3500 W</td>
                                                     <td> 1,25 m</td>
-                                                    <td><a href='update.php?id=<?php echo $row['id'];?>'><i class="fal fa-pen fs-6 text-info"></i></a></td>
+                                                    <td> 200 Dhs</td>
+                                                    <td><a href='<?=URLROOT?>/pages/ajoute_produit?id=<?php echo $row['id'];?>'><i class="fal fa-pen fs-6 text-info"></i></a></td>
                                                     <td><a href='delete.php?id=<?php echo $row['id'];?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>
                                                     </tr>
 
@@ -128,7 +168,7 @@ require_once APPROOT.'/views/inc/head.php';
                                             ?>
 
                                         </tbody>
-                                    </table>
+                                    </table> -->
                                 </div>
                             </div>
                         

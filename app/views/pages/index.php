@@ -26,7 +26,7 @@ require_once APPROOT.'/views/inc/navbar.php';
         </div>
 
 
-       
+    </div>
 
     <div class="container ">
         

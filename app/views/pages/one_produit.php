@@ -30,7 +30,7 @@ require_once APPROOT.'/views/inc/navbar.php';
             <span class=" py-2 fs-4 fw-bolder">tarif :</span><span class=" py-2 fs-4 fw-bolder"> 100 dh/jour</span><br>
             </div>
             <div class="py-2 d-flex  justify-content-center">
-            <button type="ACHETE" class=" w-100 btn btn-border-comcech rounded px-5 ">ACHETE</button>
+            <button type="button" class=" w-100 btn btn-border-comcech rounded px-5 ">ACHETE</button>
             </div>
             
         </div>
