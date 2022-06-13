@@ -39,11 +39,10 @@
     }
 
     public function produits(){
-      $data = [
-        'title' => 'TraversyMVC',
-      ];
+      $data=$this->produitModel->affichage_produit();
      
       $this->view('pages/produits', $data);
+      
     }
 
     public function one_produit(){
@@ -123,6 +122,13 @@
       ];
 
       $this->view('pages/update_produit', $data);
+    }
+    public function info_client(){
+      $data = [
+        'title' => 'update Produit'
+      ];
+
+      $this->view('pages/info_client', $data);
     }
 
     

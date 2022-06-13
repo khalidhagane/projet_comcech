@@ -8,8 +8,8 @@
    }
         public function addProduit($data){
             
-            $this->db->query("INSERT INTO `produits`( `image`,`produit`, `poid`, `tension`, `puissance`, `longueur`, `prix`)
-             VALUES (?,?,?,?,?,?,?)");
+            $this->db->query("INSERT INTO `produits`( `image`,`produit`, `poid`, `tension`, `puissance`, `longueur`, `prix` , `description`)
+             VALUES (?,?,?,?,?,?,?,?)");
              $this->db->bind(1,$data['image']);
              $this->db->bind(2,$data['produit']);
              $this->db->bind(3 ,$data['poid']);
@@ -17,6 +17,7 @@
              $this->db->bind(5 ,$data['puissance'] );
              $this->db->bind(6 ,$data['longueur']);
              $this->db->bind(7 ,$data['prix']);
+             $this->db->bind(8 ,$data['description']);
 
             try{
                 $this->db->execute();
@@ -51,7 +52,7 @@
         public function update_produit($data , $id){
             // UPDATE `produits` SET `id`='[value-1]',`produit`='[value-2]',`poid`='[value-3]',`tension`='[value-4]',`puissance`='[value-5]',`longueur`='[value-6]',`prix`='[value-7]',`image`='[value-8]' WHERE 1
         
-            $this->db->query("UPDATE `produits` SET  `produit` = ?, `poid` = ?, `tension` = ?, `puissance` = ?, `longueur` = ?, `prix` = ? WHERE `id` = '$id'") ;
+            $this->db->query("UPDATE `produits` SET  `produit` = ?, `poid` = ?, `tension` = ?, `puissance` = ?, `longueur` = ?, `prix` = ? ,`description` = ? WHERE `id` = '$id'") ;
           
              $this->db->bind(1,$data['produit']);
              $this->db->bind(2,$data['poid']);
@@ -59,6 +60,8 @@
              $this->db->bind(4 ,$data['puissance'] );
              $this->db->bind(5 ,$data['longueur']);
              $this->db->bind(6 ,$data['prix']);
+             $this->db->bind(7 ,$data['description']);
+             
             //  $this->db->execute(array(
  
             //     ':image' => ['image'],

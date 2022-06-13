@@ -7,7 +7,6 @@
        $this->db = new Database();
    }
 
-
     public function affichage_commande(){
     $this->db->query("SELECT * FROM `commandes`");
     

@@ -58,7 +58,7 @@ require_once APPROOT.'/views/inc/head.php';
                                         <?php
                                         foreach($data as $commande){
                                             ?>
-                                            <tr>
+                                            <tr class="bg-white">
                                                 <td><?= $commande->image ?></td>
                                                 <td><?= $commande->produit ?></td>
                                                 <td><?= $commande->quantite?></td>
@@ -66,8 +66,11 @@ require_once APPROOT.'/views/inc/head.php';
                                                 <td><?= $commande->address?></td>
                                                 <td><?= $commande->phone ?></td>
                                                 <td><?= $commande->prix ?></td>
-                                                <td><a href='<?=URLROOT?>/CommandeController/update_produit/<?php echo $commande->id;?>'><i class="fal fa-pen fs-6 text-info"></i></a></td>
-                                                <td><a href='<?=URLROOT?>/ComanndeController/delete_produit/<?php echo $commande->id;?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>
+                                                
+                                                <td><a href='#<?php echo $commande->id;?>'><i class="fas fa-ban fs-6 text-info"></i></a></td>
+                                                <td><a href='#<?php echo $commande->id;?>'><i class="far fa-check-circle fs-6 text-info"></i></a></td>
+                                                <!-- <td><a href='<?=URLROOT?>/CommandeController/update_produit/<?php echo $commande->id;?>'><i class="fal fa-pen fs-6 text-info"></i></a></td>
+                                                <td><a href='<?=URLROOT?>/ComanndeController/delete_produit/<?php echo $commande->id;?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td> -->
                                             </tr>
                                             <?php
                                         }

@@ -50,6 +50,7 @@ require_once APPROOT.'/views/inc/head.php';
                                                 <th class="text-muted h6">puissance</th>
                                                 <th class=" text-muted h6">longueur</th>
                                                 <th class=" text-muted h6">prix</th>
+                                                <th class=" text-muted h6">description</th>
                                                 <th style="display: none;">a</th>
                                                 <th style="display: none;">a</th>
                                             </tr>
@@ -58,7 +59,7 @@ require_once APPROOT.'/views/inc/head.php';
                                         <?php
                                         foreach($data as $produit){
                                             ?>
-                                            <tr>
+                                            <tr class="bg-white">
                                                 <td><?= $produit->image ?></td>
                                                 <td><?= $produit->produit ?></td>
                                                 <td><?= $produit->poid ?></td>
@@ -66,6 +67,7 @@ require_once APPROOT.'/views/inc/head.php';
                                                 <td><?= $produit->puissance ?></td>
                                                 <td><?= $produit->longueur?></td>
                                                 <td><?= $produit->prix ?></td>
+                                                <td><?= $produit->description?></td>
                                                 <td><a href='<?=URLROOT?>/ProduitController/update_produit/<?php echo $produit->id;?>'><i class="fal fa-pen fs-6 text-info"></i></a></td>
                                                 <td><a href='<?=URLROOT?>/ProduitController/delete_produit/<?php echo $produit->id;?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>
                                             </tr>

@@ -16,6 +16,7 @@ class ProduitController extends Controller{
         
          $data =  $this->produitModel->affichage_produit();
         
+        
     }
     
     public function delete_produit($id){

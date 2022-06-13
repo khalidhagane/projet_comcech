@@ -8,8 +8,6 @@ class CommandeController extends Controller{
 
     function affichage_commande(){
 
-       
-
         $data = $this->commandeModel->affichage_commande();
     }
 
