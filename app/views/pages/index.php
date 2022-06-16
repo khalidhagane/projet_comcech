@@ -250,20 +250,31 @@ require_once APPROOT.'/views/inc/navbar.php';
 
           
             <div class="row gap-4 d-flex justify-content-center px-4 ">
+            <?php
 
-                <div class="d-flex flex-column justify-content-between col-ms-11  col-md-5 col-lg-3  p-0 card  border-0 shadow gap-3  ">
+                     
+                foreach($data as $produit){
                     
-                    <img  class="h-50 w-100 rounded-top " src="<?=URLROOT?>/img/images/trax2.jpg" alt="img">
+                    ?>
 
-                    <div class="px-2 ">
-                        <h3 class="">traveux public</h3>
-                        <p class="mb-2"> Compactage, terrassement et matériel terrassement et matériel de chantier </p>
+                    <div class="d-flex flex-column justify-content-between col-ms-11  col-md-5 col-lg-3  p-0 card  border-0 shadow gap-3  ">
                         
-                    </div >
-                    <button type="button" class="btn btn-border-comcech btn-outline-primary fw-bolder rounded-0 border-0 border-top   "> Voir plus <i class="fas fa-arrow-right"></i></button>
-                </div>
+                        <img  class="h-50 w-100 rounded-top " src="<?=URLROOT?>/img/images/trax2.jpg" alt="img">
+
+                        <div class="px-2 ">
+                            <h3 class="">fjklgkfm</h3>
+                            <p class="mb-2"> gklnv </p>
+                            
+                        </div >
+                        <a href="<?=URLROOT?>/CategureController/affichage_groupeproduit/<?php echo $produit->categure?>"  class="btn btn-border-comcech btn-outline-primary fw-bolder rounded-0 border-0 border-top "> Voir plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <?php
+                    
+                                                }
+                                                ?> 
+            
                 
-                <div class="d-flex flex-column justify-content-between col-ms-11  col-md-5  col-lg-3  p-0 card  border-0 shadow gap-3  ">
+                <!-- <div class="d-flex flex-column justify-content-between col-ms-11  col-md-5  col-lg-3  p-0 card  border-0 shadow gap-3  ">
                     
                     <img  class="h-50 w-100 rounded-top " src="<?=URLROOT?>/img/images/groupe1.Jpg" alt="img">
 
@@ -318,7 +329,7 @@ require_once APPROOT.'/views/inc/navbar.php';
                         
                     </div>
                     <button type="button" class="btn btn-border-comcech btn-outline-primary fw-bolder rounded-0 border-0 border-top   "> Voir plus <i class="fas fa-arrow-right"></i></button>
-                </div>
+                </div> -->
             
             </div>
         

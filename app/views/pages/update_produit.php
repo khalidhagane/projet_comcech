@@ -67,13 +67,21 @@ require_once APPROOT.'/views/inc/head.php';
                                         <input type="number" name="prix"  class="form-control" value='<?php echo $data['prix']; ?>'  id="exampleInputPassword1">
                                     </div>
                                     <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                                    <label for="exampleFormControlTextarea1" class="form-label">description</label>
                                     <textarea class="form-control" type="text" name="description"  value='' id="exampleFormControlTextarea1" rows="3"><?php echo $data['description']; ?></textarea>
                                     </div>
                                     <!-- <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                                     </div> -->
+                                    <div>
+                                    <select id="categure" name="categure">
+                                    <option value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="fiat" selected>Fiat</option>
+                                    <option value="audi">Audi</option>
+                                    </select>
+                                    </div>
                                     <input type="submit" name="submit"  class="btn btn-primary" value="submit">
                             </form>
 

@@ -3,13 +3,15 @@
     public function __construct(){
       $this->produitModel = $this->model('ProduitModel');
       $this->commandeModel = $this->model('CommandeModel');
+      $this->categureModel = $this->model('CategureModel');
 
     }
     
     public function index(){
-      $data = [
-        'title' => 'TraversyMVC',
-      ];
+      // $data = [
+      //   'title' => 'TraversyMVC',
+      // ];
+      $data =  $this->categureModel->affichage_categure();
      
       $this->view('pages/index', $data);
     }
@@ -82,7 +84,7 @@
     // }
     public function slaid(){
       $data = [
-        'title' => 'TraversyMVC',
+        'title' => 'TraversyMVC jamal',
       ];
      
       $this->view('pages/slaid', $data);
@@ -90,28 +92,28 @@
 
     public function panier(){
       $data = [
-        'title' => 'TraversyMVC',
+        'title' => 'TraversyMVC halim',
       ];
      
       $this->view('pages/panier', $data);
     }
     public function table_clients(){
       $data = [
-        'title' => 'TraversyMVC',
+        'title' => 'TraversyMVC kamal',
       ];
      
       $this->view('pages/table_clients', $data);
     }
     public function commantair(){
       $data = [
-        'title' => 'TraversyMVC',
+        'title' => 'TraversyMVC namir',
       ];
      
       $this->view('pages/commantair', $data);
     }
     public function ajoute_produit(){
       $data = [
-        'title' => 'TraversyMVC',
+        'title' => 'TraversyMVC samir',
       ];
      
       $this->view('pages/ajoute_produit', $data);
@@ -123,6 +125,13 @@
 
       $this->view('pages/update_produit', $data);
     }
+    public function update_categure(){
+      $data = [
+        'title' => 'update categure'
+      ];
+
+      $this->view('pages/update_categure', $data);
+    }
     public function info_client(){
       $data = [
         'title' => 'update Produit'
@@ -130,7 +139,29 @@
 
       $this->view('pages/info_client', $data);
     }
+    public function ajoute_categure(){
+      $data = [
+        'title' => 'update Produit'
+      ];
 
+      $this->view('pages/ajoute_categure', $data);
+    }
+  
+    public function table_categure(){
+      // $data = [
+      //   'title' => 'table_categure'
+      // ];
+      $data =  $this->categureModel->affichage_categure();
+
+      $this->view('pages/table_categure', $data);
+      
+    }
+
+    // public function affichage_groupeproduit(){
+      
+    //   $this->view('pages/index', $data);
+    // }
+    
     
 
     public function about(){

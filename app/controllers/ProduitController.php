@@ -8,13 +8,17 @@ class ProduitController extends Controller{
     public function addProduit(){
         $data = $_POST;
         
+        
         $this->produitModel->addProduit($data);
+
+       
         redirect("/pages/table_produits");
     }
 
     public function affichage_produit(){
         
          $data =  $this->produitModel->affichage_produit();
+        
         
         
     }

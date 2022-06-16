@@ -45,6 +45,12 @@
                                 <span class=" d-none d-sm-inline">commantair</span>
                             </a>
                         </li>
+                        <li class="mb-2 text-center w-100">
+                            <a href="<?=URLROOT?>/pages/table_categure"  class="nav-link  text-dark rounded ">
+                                <i class="fal fa-file-chart-line pe-2"></i> 
+                                <span class=" d-none d-sm-inline">categures</span>
+                            </a>
+                        </li>
                         
 
                         <li class="mt-2 text-center w-100 " >
