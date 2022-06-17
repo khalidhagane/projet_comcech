@@ -33,7 +33,7 @@ require_once APPROOT.'/views/inc/navbar.php';
                 <img  class="h-50 w-75 pt-3" src="<?=URLROOT?>/img/images/groupe.png" alt="img">
 
                 <div class=" w-100   d-flex align-items-center">
-                    <span class="text-start ps-2 text-white bg-price p-2"><?= $produit->prix ?> Dhs</span>
+                    <span class="text-start ps-2 text-white bg-price p-2"><?= $produit->prix ?> MAD</span>
                 </div>
 
                 <div class="px-2 pb-3 d-flex flex-column align-items-center ">

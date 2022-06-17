@@ -21,17 +21,24 @@
                             </a>
                         </li>
                         <li class="mb-2 text-center w-100" >
-                            <a href="<?=URLROOT?>/pages/table_produits"  class="nav-link   text-dark rounded ">
-                            <i class="fab fa-product-hunt pe-2"></i>
-                                <span class=" d-none d-sm-inline">Produits</span> 
-                            </a>
-                        </li>
-                        <li class="mb-2 text-center w-100" >
                             <a href="<?=URLROOT?>/pages/table_commandes" class="nav-link  text-dark rounded  ">
                             <i class="fas fa-person-carry pe-2"></i>
                                 <span class=" d-none d-sm-inline ">Commandes</span>
                             </a>
                         </li>
+                        <li class="mb-2 text-center w-100">
+                            <a href="<?=URLROOT?>/pages/table_categure"  class="nav-link  text-dark rounded ">
+                            <i class="fab fa-product-hunt pe-2"></i> 
+                                <span class=" d-none d-sm-inline">categures</span>
+                            </a>
+                        </li>
+                        <li class="mb-2 text-center w-100" >
+                            <a href="<?=URLROOT?>/pages/table_produits"  class="nav-link   text-dark rounded ">
+                            <i class="fab fa-product-hunt pe-2"></i>
+                                <span class=" d-none d-sm-inline">Produits</span> 
+                            </a>
+                        </li>
+                        
 
                         <li class="mb-2 text-center w-100" >
                             <a href="<?=URLROOT?>/pages/table_clients" class="nav-link  text-dark rounded ">
@@ -46,11 +53,12 @@
                             </a>
                         </li>
                         <li class="mb-2 text-center w-100">
-                            <a href="<?=URLROOT?>/pages/table_categure"  class="nav-link  text-dark rounded ">
+                            <a href="<?=URLROOT?>/pages/table_promotion"  class="nav-link  text-dark rounded ">
                                 <i class="fal fa-file-chart-line pe-2"></i> 
-                                <span class=" d-none d-sm-inline">categures</span>
+                                <span class=" d-none d-sm-inline">promotion</span>
                             </a>
                         </li>
+                        
                         
 
                         <li class="mt-2 text-center w-100 " >

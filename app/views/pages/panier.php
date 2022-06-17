@@ -1,14 +1,15 @@
 <?php
-
+session_start();
 require_once APPROOT.'/views/inc/head.php';
 require_once APPROOT.'/views/inc/navbar.php';
+
 ?>
 
     <div class="pt-5 container">
         <form class="h-25 row  ">
             <?php
                 $prix = 0;
-                 foreach($_COOKIE['panier'] as $produit) :
+                 foreach($_SESSION['panier'] as $produit) :
                     $produitDetails = explode(',', $produit); 
             ?>
             <div class="  card  shadow border-0 col-12 col-md-9 mb-3 me-auto" > <!--  style="width: 600px;"  -->
@@ -20,13 +21,13 @@ require_once APPROOT.'/views/inc/navbar.php';
                         <div class=" w-50 d-flex flex-column gap-3">
                             <img class="w-75 h-50" src="<?=URLROOT?>/img/images/groupe.png" alt="">
                             <!-- <span class="ps-4 text-info ">suprimer</span> -->
-                            <a class="ps-4 text-info " href="<?=URLROOT?>/PanierController/deleteproduit_panier/<?php echo $produitDetails[1];?>">suprimer</a>
+                            <a class="ps-4 text-info " href="<?=URLROOT?>/PanierController/deleteproduit_panier/<?php echo $produitDetails[2];?>">suprimer</a>
                         </div>
                         <div>
                                 <span class="produitsName">
                                     <?php
                                        // $produitDetails = explode(',', $produit);
-                                        echo $produitDetails[0];
+                                        echo $produitDetails[1];
                                     ?> 
                                 </span>
                         </div>
@@ -34,19 +35,21 @@ require_once APPROOT.'/views/inc/navbar.php';
                     
                     <div class="w-50 d-flex flex-column justify-content-between ">
                         <div>
-                            <span>prix : </span><span class="text-center "><?php echo $produitDetails[2];?> Dhs</span>
+                            <span>prix : </span><span class="text-center "><?php echo $produitDetails[3];?> MAD</span>
                         </div>
 
-                        <div class="d-flex flex-row ">
+                        <!-- <div class="d-flex flex-row ">
                             
-                        <input onclick="calcul()" type="date" class="form-control border-info" >
+                        <input  type="date" class="form-control border-info" >
 
-                        <input onclick="calcul()" type="date"  class="form-control border-info" >
-                        </div>
+                        <input  type="date"  class="form-control border-info" >
+                        </div> -->
+
+
+                        <input onclick="calcul()" type="number" value="1" class="form-control border-info" id="<?php echo $produitDetails[1];?>" prix="<?php echo $produitDetails[3];?>">
+                        <input type="hidden" name="id" value="<?php echo $produitDetails[2];?>" class="id">
 
                         
-                        <input onclick="calcul()" type="number" value="1" class="form-control border-info " id="<?php echo $produitDetails[0];?>" prix="<?php echo $produitDetails[2];?>">
-                        <input type="hidden" name="id" value="<?php echo $produitDetails[1];?>" class="id">
                     </div>
                     
                 </div>
@@ -75,10 +78,6 @@ require_once APPROOT.'/views/inc/navbar.php';
 
 </main>
 
-<?php
- 
-require_once APPROOT.'/views/inc/footer_script.php';
-?>
 <script>
     prixTTC = 0;
     eltTTC = document.querySelector('#prixTTC');
@@ -87,7 +86,7 @@ require_once APPROOT.'/views/inc/footer_script.php';
 
     function calcul(){
         produits = document.querySelectorAll(".produitsName");
-        prixTTC = 0;
+        // prixTTC = 0;
         produits.forEach(produit => {
             // console.log();
             qte = document.querySelector("#" + produit.innerText + "").value;
@@ -100,3 +99,9 @@ require_once APPROOT.'/views/inc/footer_script.php';
 
 
 </script>
+
+
+<?php
+ 
+require_once APPROOT.'/views/inc/footer_script.php';
+?>

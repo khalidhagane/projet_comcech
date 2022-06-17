@@ -2,6 +2,7 @@
 
 require_once APPROOT.'/views/inc/head.php';
 require_once APPROOT.'/views/inc/navbar.php';
+
 ?>
 
     <div class=" image_daccueil vh-100 d-flex flex-row justify-content-center align-items-center">
@@ -18,6 +19,35 @@ require_once APPROOT.'/views/inc/navbar.php';
         </div>
     </div>
 
+    <section class="page-section mt-5 " id="apropo">
+      <div class="container card border-bottom border-0">
+          <div class="text-center">
+              <h2 class="section-heading text-uppercase color_comcech_text">Apropo de nous</h2>
+          </div>
+          <div class="row text-center">
+              <div class="col-md-4 mt-4">
+              <img class="rounded-circle" src="<?=URLROOT?>/img/images/trax2.jpg" height="100px" width="100px" alt="">
+                  <h4  style="margin-top: 40px;">AZZDINE HAGANE</h4>
+                  <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui.  </p>
+              </div>
+
+
+                <div class="col-md-4 mt-4">
+                  <img class="rounded-circle" src="<?=URLROOT?>/img/images/trax2.jpg" height="100px" width="100px" alt=""> 
+               <h4  style="margin-top: 40px;">COMCECH</h4>
+                  <p class="text-muted">entreprise et location de matirialle constrouire</p>
+              </div>
+
+              <div class="col-md-4 mt-4">
+                <img class="rounded-circle" src="<?=URLROOT?>/img/images/trax2.jpg" height="100px" width="100px" alt="">
+                  <h4  style="margin-top: 40px;">OBJECTIF</h4>
+                  <p class="text-muted">aide de aplicition fasilite de taravaille sur matirialle.</p>
+              </div>
+
+          </div>
+      </div>
+  </section>
+
 <!-- start partie pronotion -->
     <div class=" d-flex flex-column align-items-center gap-4" >
         <div class="w-75 d-flex flex-column align-items-center ">
@@ -31,20 +61,25 @@ require_once APPROOT.'/views/inc/navbar.php';
     <div class="container ">
         
         <div class=" row gap-4 d-flex justify-content-center  px-4 " >
-        <a class="text-decoration-none col-sm-12 border-0 shadow col-lg-5 p-2 card d-flex flex-row align-items-center " style=" background: linear-gradient(-0.58deg, #02ACDF -20.73%, #FFFFFF 70.84%);  " href="#">
+        <?php
+                                        foreach($dataList as $produit){
+                                            ?>
+        <a href="<?=URLROOT?>/PromotionController/get_produitpromotion/<?php echo $produit->id?>" class="text-decoration-none col-sm-12 border-0 shadow col-lg-5 p-2 card d-flex flex-row align-items-center " style=" background: linear-gradient(-0.58deg, #02ACDF -20.73%, #FFFFFF 70.84%);  " >
             
             
             <img class="h-75 w-25" src="<?=URLROOT?>/img/images/groupe.png" alt="" >
                         
                         <div class="d-flex flex-column ps-2">
-                            <p class="fs-3 text-center text-dark">MEILLEURE  MACHINE A LOUER AUJOURD'HUI!</p>
-                            <span class= "fs-2 text-white text-center ">120,00 Dh</span>
-                            <span class="fs-5  text-secondary text-decoration-line-through ">150,00 Dh</span>
+                            <p class="fs-3 text-center text-dark"><?= $produit->description ?></p>
+                            <span class= "fs-2 text-white text-center "><?= $produit->prix ?> MAD</span>
+                            <span class="fs-5  text-secondary text-decoration-line-through "><?= $produit->prix2 ?> MAD</span>
                         </div>
         
         </a>
+        <?php 
+                    } ?>
             
-            <a class="text-decoration-none col-sm-12 border-0 shadow col-lg-5 p-2 card d-flex flex-row align-items-center " style=" background: linear-gradient(-0.58deg, #02ACDF -20.73%, #FFFFFF 70.84%);  " href="#">
+            <!-- <a class="text-decoration-none col-sm-12 border-0 shadow col-lg-5 p-2 card d-flex flex-row align-items-center " style=" background: linear-gradient(-0.58deg, #02ACDF -20.73%, #FFFFFF 70.84%);  " href="#">
             
             
             <img class="h-75 w-25" src="<?=URLROOT?>/img/images/post_sodage-mv.png" alt="" >
@@ -79,7 +114,7 @@ require_once APPROOT.'/views/inc/navbar.php';
                                 <span class="fs-5  text-secondary text-decoration-line-through ">100,00 Dh</span>
                             </div>
             
-            </a>
+            </a> -->
         
         </div>
     </div>
@@ -124,7 +159,7 @@ require_once APPROOT.'/views/inc/navbar.php';
     <a class="card d-flex flex-column align-items-center border-0 shadow gap-2 w-50 py-4 text-decoration-none card_slaid  " href="#" >
             
             <div class=" w-100  d-flex align-items-center">
-                <span class="text-start ps-2 text-white bg-price p-2">400 Dhs</span>
+                <span class="text-start ps-2 text-white bg-price p-2">400 MAD</span>
             </div>
             <img  class="h-75 w-50 mt-4 px-2" src="<?=URLROOT?>/img/images/groupe.png " alt="img">
             <h3 class="text-center text-dark px-2 ">générateur de moteur</h3>
@@ -134,7 +169,7 @@ require_once APPROOT.'/views/inc/navbar.php';
         <a class="card d-flex flex-column align-items-center border-0 shadow gap-2 w-50 py-4 text-decoration-none card_slaid  " href="#" >
             
             <div class=" w-100  d-flex align-items-center">
-                <span class="text-start ps-2 text-white bg-price p-2">400 Dhs</span>
+                <span class="text-start ps-2 text-white bg-price p-2">400 MAD</span>
             </div>
             <img  class="h-75 w-50 mt-4 px-2" src="<?=URLROOT?>/img/images/groupe.png " alt="img">
             <h3 class="text-center text-dark px-2 ">générateur de moteur</h3>
@@ -144,7 +179,7 @@ require_once APPROOT.'/views/inc/navbar.php';
         <a class="card d-flex flex-column align-items-center border-0 shadow gap-2 w-50 py-4 text-decoration-none card_slaid  " href="#" >
             
             <div class=" w-100  d-flex align-items-center">
-                <span class="text-start ps-2 text-white bg-price p-2">400 Dhs</span>
+                <span class="text-start ps-2 text-white bg-price p-2">400 MAD</span>
             </div>
             <img  class="h-75 w-50 mt-4 px-2" src="<?=URLROOT?>/img/images/groupe.png " alt="img">
             <h3 class="text-center text-dark px-2 ">générateur de moteur</h3>
@@ -158,7 +193,7 @@ require_once APPROOT.'/views/inc/navbar.php';
     <a class="card d-flex flex-column align-items-center border-0 shadow gap-2 w-50 py-4 text-decoration-none card_slaid  " href="#" >
             
             <div class=" w-100  d-flex align-items-center">
-                <span class="text-start ps-2 text-white bg-price p-2">400 Dhs</span>
+                <span class="text-start ps-2 text-white bg-price p-2">400 MAD</span>
             </div>
             <img  class="h-75 w-50 mt-4 px-2" src="<?=URLROOT?>/img/images/groupe.png " alt="img">
             <h3 class="text-center text-dark px-2 ">générateur de moteur</h3>
@@ -168,7 +203,7 @@ require_once APPROOT.'/views/inc/navbar.php';
         <a class="card d-flex flex-column align-items-center border-0 shadow gap-2 w-50 py-4 text-decoration-none card_slaid  " href="#" >
             
             <div class=" w-100  d-flex align-items-center">
-                <span class="text-start ps-2 text-white bg-price p-2">400 Dhs</span>
+                <span class="text-start ps-2 text-white bg-price p-2">400 MAD</span>
             </div>
             <img  class="h-75 w-50 mt-4 px-2" src="<?=URLROOT?>/img/images/groupe.png " alt="img">
             <h3 class="text-center text-dark px-2 ">générateur de moteur</h3>
@@ -178,7 +213,7 @@ require_once APPROOT.'/views/inc/navbar.php';
         <a class="card d-flex flex-column align-items-center border-0 shadow gap-2 w-50 py-4 text-decoration-none card_slaid  " href="#" >
             
             <div class=" w-100  d-flex align-items-center">
-                <span class="text-start ps-2 text-white bg-price p-2">400 Dhs</span>
+                <span class="text-start ps-2 text-white bg-price p-2">400 MAD</span>
             </div>
             <img  class="h-75 w-50 mt-4 px-2" src="<?=URLROOT?>/img/images/groupe.png " alt="img">
             <h3 class="text-center text-dark px-2 ">générateur de moteur</h3>
@@ -192,7 +227,7 @@ require_once APPROOT.'/views/inc/navbar.php';
     <a class="card d-flex flex-column align-items-center border-0 shadow gap-2  py-4 text-decoration-none card_slaid  " href="#" >
             
             <div class=" w-100  d-flex align-items-center">
-                <span class="text-start ps-2 text-white bg-price p-2">400 Dhs</span>
+                <span class="text-start ps-2 text-white bg-price p-2">400 MAD</span>
             </div>
             <img  class="h-75 w-50 mt-4 px-2" src="<?=URLROOT?>/img/images/groupe.png " alt="img">
             <h3 class="text-center text-dark px-2 ">générateur de moteur</h3>
@@ -202,7 +237,7 @@ require_once APPROOT.'/views/inc/navbar.php';
         <a class="card d-flex flex-column align-items-center border-0 shadow gap-2 w-50 py-4 text-decoration-none card_slaid  " href="#" >
             
             <div class=" w-100  d-flex align-items-center">
-                <span class="text-start ps-2 text-white bg-price p-2">400 Dhs</span>
+                <span class="text-start ps-2 text-white bg-price p-2">400 MAD</span>
             </div>
             <img  class="h-75 w-50 mt-4 px-2" src="<?=URLROOT?>/img/images/groupe.png " alt="img">
             <h3 class="text-center text-dark px-2 ">générateur de moteur</h3>
@@ -212,7 +247,7 @@ require_once APPROOT.'/views/inc/navbar.php';
         <a class="card d-flex flex-column align-items-center border-0 shadow gap-2 w-50 py-4 text-decoration-none card_slaid  " href="#" >
             
             <div class=" w-100  d-flex align-items-center">
-                <span class="text-start ps-2 text-white bg-price p-2">400 Dhs</span>
+                <span class="text-start ps-2 text-white bg-price p-2">400 MAD</span>
             </div>
             <img  class="h-75 w-50 mt-4 px-2" src="<?=URLROOT?>/img/images/groupe.png " alt="img">
             <h3 class="text-center text-dark px-2 ">générateur de moteur</h3>
@@ -248,7 +283,13 @@ require_once APPROOT.'/views/inc/navbar.php';
                 <span class="color_comcech_text fw-bolder  mb-4 mt-5 fs-3"> UNE LARGE GAMME DE LATERIELS </span>
             </div>
 
-          
+
+
+        
+
+
+
+
             <div class="row gap-4 d-flex justify-content-center px-4 ">
             <?php
 
@@ -262,8 +303,8 @@ require_once APPROOT.'/views/inc/navbar.php';
                         <img  class="h-50 w-100 rounded-top " src="<?=URLROOT?>/img/images/trax2.jpg" alt="img">
 
                         <div class="px-2 ">
-                            <h3 class="">fjklgkfm</h3>
-                            <p class="mb-2"> gklnv </p>
+                            <h3 class=""><?php echo $produit->produit?></h3>
+                            <p class="mb-2"> <?php echo $produit->description?></p>
                             
                         </div >
                         <a href="<?=URLROOT?>/CategureController/affichage_groupeproduit/<?php echo $produit->categure?>"  class="btn btn-border-comcech btn-outline-primary fw-bolder rounded-0 border-0 border-top "> Voir plus <i class="fas fa-arrow-right"></i></a>

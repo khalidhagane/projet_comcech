@@ -4,6 +4,7 @@
       $this->produitModel = $this->model('ProduitModel');
       $this->commandeModel = $this->model('CommandeModel');
       $this->categureModel = $this->model('CategureModel');
+      $this->promotionModel = $this->model('PromotionModel');
 
     }
     
@@ -11,10 +12,21 @@
       // $data = [
       //   'title' => 'TraversyMVC',
       // ];
-      $data =  $this->categureModel->affichage_categure();
+       $dataList =  $this->promotionModel->affichage_promotion();
+       $data =  $this->categureModel->affichage_categure();
      
-      $this->view('pages/index', $data);
+      $this->view('pages/index', $data , $dataList );
     }
+    // public function index2(){
+    //   // $data = [
+    //   //   'title' => 'TraversyMVC',
+    //   // ];
+    //   $data =  $this->promotionModel->affichage_promotion();
+       
+     
+    //   $this->view('pages/index', $data );
+    // }
+    
 
     public function signin(){
       $data = [
@@ -155,6 +167,29 @@
 
       $this->view('pages/table_categure', $data);
       
+    }
+    public function table_promotion(){
+      // $data = [
+      //   'title' => 'TraversyMVC',
+      // ];
+      $data =  $this->promotionModel->affichage_promotion();
+        
+      $this->view('pages/table_promotion', $data);
+    }
+
+    public function ajoute_promotion(){
+      $data = [
+        'title' => 'TraversyMVC samir',
+      ];
+     
+      $this->view('pages/ajoute_promotion', $data);
+    }
+    public function update_promotion(){
+      $data = [
+        'title' => 'update Produit'
+      ];
+
+      $this->view('pages/update_promotion', $data);
     }
 
     // public function affichage_groupeproduit(){

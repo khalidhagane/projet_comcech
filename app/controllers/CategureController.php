@@ -10,10 +10,7 @@ class CategureController extends Controller{
     public function addcategure(){
         $data = $_POST;
         
-        
-        
         $this->categureModel->addcategure($data);
-
        
         redirect("/pages/table_categure");
     }
@@ -21,7 +18,6 @@ class CategureController extends Controller{
     public function affichage_categure(){
         
          $data =  $this->categureModel->affichage_categure();
-         
          
     }
     
