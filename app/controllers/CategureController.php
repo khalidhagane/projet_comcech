@@ -9,6 +9,9 @@ class CategureController extends Controller{
 
     public function addcategure(){
         $data = $_POST;
+
+        $categure_img = dirname(APPROOT) . "/public/img/categure_img/" . $_FILES['image']['name'];
+        move_uploaded_file($_FILES['image']['tmp_name'], $categure_img);
         
         $this->categureModel->addcategure($data);
        
@@ -38,6 +41,9 @@ class CategureController extends Controller{
             
          }else if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $data =  $_POST;
+            $target_img = dirname(APPROOT) . "/public/img/image_produit/" . $_FILES['image']['name'];
+            move_uploaded_file($_FILES['image']['tmp_name'], $target_img);
+            
             $this->categureModel->update_categure($data,$id);
             redirect('/pages/table_categure');
          }

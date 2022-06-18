@@ -10,7 +10,7 @@
             
             $this->db->query("INSERT INTO `categures`( `image`,`produit`, `description`,`categure`)
              VALUES (?,?,?,?)");
-             $this->db->bind(1,$data['image']);
+             $this->db->bind(1,$_FILES['image']['name']);
              $this->db->bind(2 ,$data['produit']);
              $this->db->bind(3 ,$data['description']);
              $this->db->bind(4 ,$data['categure']);
@@ -55,7 +55,7 @@
             
             $this->db->query("UPDATE `categures` SET `image` = ? , `produit` = ? ,`description` = ? ,`categure` = ? WHERE `id` = '$id'") ;
             
-            $this->db->bind(1,$data['image']);
+            $this->db->bind(1,$_FILES['image']['name']);
             $this->db->bind(2 ,$data['produit']);
              $this->db->bind(3 ,$data['description']);
              $this->db->bind(4 ,$data['categure']);

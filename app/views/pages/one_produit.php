@@ -11,7 +11,9 @@ require_once APPROOT.'/views/inc/navbar.php';
         <div class=" w-50 d-flex flex-column justify-content-center align-items-center">
             
             <!-- <p class="w-50  " >groupe 5000 V</p> -->
-            <img class="w-50  " src="<?=URLROOT?>/img/images/groupe.png" alt="photo">
+            <img class="w-50 " src="<?php echo URLROOT ?>/public/img/image_produit/<?php echo $data->image ?>"src="<?=URLROOT?>/img/images/groupe.png" alt="photo">
+            <!-- <img width="50px" src="<?php echo URLROOT ?>/public/img/image_produit/<?php echo $data->image ?>" alt=""> -->
+            
         </div>
         <div> 
 

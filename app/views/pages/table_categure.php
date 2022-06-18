@@ -56,7 +56,7 @@ require_once APPROOT.'/views/inc/head.php';
                                         foreach($data as $produit){
                                             ?>
                                             <tr class="bg-white">
-                                                <td><?= $produit->image ?></td>
+                                            <td ><img width="50px" src="<?php echo URLROOT ?>/public/img/categure_img/<?php echo $produit->image ?>" alt=""></td>
                                                 <td><?= $produit->produit?></td>
                                                 <td><?= $produit->description?></td>
                                                 <td><?= $produit->categure?></td>

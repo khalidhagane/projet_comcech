@@ -10,7 +10,7 @@
             
             $this->db->query("INSERT INTO `produits`( `image`,`produit`, `poid`, `tension`, `puissance`, `longueur`, `prix` , `description`,`categure`)
              VALUES (?,?,?,?,?,?,?,?,?)");
-             $this->db->bind(1,$data['image']);
+             $this->db->bind(1,$_FILES['image']['name']);
              $this->db->bind(2,$data['produit']);
              $this->db->bind(3 ,$data['poid']);
              $this->db->bind(4 ,$data['tension']);
@@ -22,7 +22,6 @@
 
             try{
                 $this->db->execute();
-            
             }
             catch(Exception $e){
                 return $e->getMessage();
@@ -55,7 +54,7 @@
         
             $this->db->query("UPDATE `produits` SET `image` = ?, `produit` = ?, `poid` = ?, `tension` = ?, `puissance` = ?, `longueur` = ?, `prix` = ? ,`description` = ? ,`categure` = ? WHERE `id` = '$id'") ;
             
-            $this->db->bind(1,$data['image']);
+            $this->db->bind(1,$_FILES['image']['name']);
              $this->db->bind(2,$data['produit']);
              $this->db->bind(3,$data['poid']);
              $this->db->bind(4 ,$data['tension']);

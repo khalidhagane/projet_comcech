@@ -40,7 +40,7 @@ require_once APPROOT.'/views/inc/head.php';
                                 <div class="table-responsive-sm table-responsive-md  px-4">
 
 
-                                <table class="table  table-borderless ">
+                                <table class="table  table-borderless align-middle ">
                                         <thead>
                                             <tr class="text-capitalize  ">
                                                 <th class="text-muted h6 ">image</th>
@@ -59,10 +59,13 @@ require_once APPROOT.'/views/inc/head.php';
                                     <tbody>
                                         <?php
                                         foreach($data as $produit){
+                                           
+           
                                             ?>
-                                            
+                                           
                                             <tr class="bg-white ">
-                                                <td ><?= $produit->image ?></td>
+                                                <td ><img width="50px" src="<?php echo URLROOT ?>/public/img/image_produit/<?php echo $produit->image ?>" alt=""></td>
+                                    
                                                 <td><?= $produit->produit ?></td>
                                                 <td><?= $produit->poid ?></td>
                                                 <td><?= $produit->tension?></td>

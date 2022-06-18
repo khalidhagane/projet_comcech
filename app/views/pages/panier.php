@@ -19,7 +19,7 @@ require_once APPROOT.'/views/inc/navbar.php';
                 <div class="d-flex p-3 ">
                     <div class="d-flex w-50 ">
                         <div class=" w-50 d-flex flex-column gap-3">
-                            <img class="w-75 h-50" src="<?=URLROOT?>/img/images/groupe.png" alt="">
+                            <img class="w-75 h-50" src="<?php echo URLROOT ?>/public/img/image_produit/<?php echo $produitDetails[0];?>" alt="">
                             <!-- <span class="ps-4 text-info ">suprimer</span> -->
                             <a class="ps-4 text-info " href="<?=URLROOT?>/PanierController/deleteproduit_panier/<?php echo $produitDetails[2];?>">suprimer</a>
                         </div>

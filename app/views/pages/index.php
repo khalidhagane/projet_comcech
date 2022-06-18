@@ -68,6 +68,7 @@ require_once APPROOT.'/views/inc/navbar.php';
             
             
             <img class="h-75 w-25" src="<?=URLROOT?>/img/images/groupe.png" alt="" >
+            
                         
                         <div class="d-flex flex-column ps-2">
                             <p class="fs-3 text-center text-dark"><?= $produit->description ?></p>
@@ -300,7 +301,8 @@ require_once APPROOT.'/views/inc/navbar.php';
 
                     <div class="d-flex flex-column justify-content-between col-ms-11  col-md-5 col-lg-3  p-0 card  border-0 shadow gap-3  ">
                         
-                        <img  class="h-50 w-100 rounded-top " src="<?=URLROOT?>/img/images/trax2.jpg" alt="img">
+                        <!-- <img  class="h-50 w-100 rounded-top " src="<?=URLROOT?>/img/images/trax2.jpg" alt="img"> -->
+                        <img class="h-50 w-100 rounded-top " src="<?php echo URLROOT ?>/public/img/categure_img/<?php echo $produit->image ?>" alt="">
 
                         <div class="px-2 ">
                             <h3 class=""><?php echo $produit->produit?></h3>
