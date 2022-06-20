@@ -19,28 +19,28 @@ require_once APPROOT.'/views/inc/navbar.php';
                     </div>
             </div>
 
-            <form class="card border-0 w-50 form-signup d-flex p-2 px-md-5">
+            <form method="POST"  action="<?= URLROOT ?>/LoginController/addclient_signup" class="card border-0 w-50 form-signup d-flex p-2 px-md-5">
                     <span class="fs-2 text-center pb-4">SIGN UP</span>
 
                 <div class="mb-3 ">
-                    <input type="text" class="form-control " id="username" placeholder="Username" >
+                    <input type="text" name="username" class="form-control  " id="username" placeholder="Username" >
                 </div>
                 
                 <div class="mb-3">
-                    <input type="text" class="form-control" id="text" placeholder="Email ou telephone" >
+                    <input type="text" name="email_phone" class="form-control" id="text" placeholder="Email ou telephone" >
                     
                 </div>
                 <div class="mb-3">
-                    <input type="password" class="form-control" id="password" placeholder="Password" >
+                    <input type="password1" name="password1" class="form-control" id="password1" placeholder="Password" >
                 </div>
                 <div class="mb-3">
-                    <input type="password" class="form-control" id="password2" placeholder="Password" >
+                    <input type="password2" name="password2" class="form-control" id="password2" placeholder=" Password" >
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
-                <button type="submit" class="btn btn-border-comcech ">SIGN UP</button>
+                <input type="submit" class="btn btn-border-comcech " value="SIGN UP">
                 <span class="pt-2">Already have an account. <a class="text-info" href="<?=URLROOT?>/pages/signin">SIGN IN</a>?</span>
             </form>
         </div>

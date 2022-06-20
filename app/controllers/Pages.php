@@ -5,6 +5,7 @@
       $this->commandeModel = $this->model('CommandeModel');
       $this->categureModel = $this->model('CategureModel');
       $this->promotionModel = $this->model('PromotionModel');
+      $this->loginModel = $this->model('LoginModel');
 
     }
     
@@ -48,6 +49,8 @@
       $data = [
         'title' => 'TraversyMVC',
       ];
+      //  $data=$this->produitModel->affichage_count();
+     
      
       $this->view('pages/dashbord', $data);
     }
@@ -94,13 +97,13 @@
      
     //   $this->view('pages/table_commandes', $data);
     // }
-    public function slaid(){
-      $data = [
-        'title' => 'TraversyMVC jamal',
-      ];
+    // public function slaid(){
+    //   $data = [
+    //     'title' => 'TraversyMVC jamal',
+    //   ];
      
-      $this->view('pages/slaid', $data);
-    }
+    //   $this->view('pages/slaid', $data);
+    // }
 
     public function panier(){
       $data = [
@@ -110,18 +113,21 @@
       $this->view('pages/panier', $data);
     }
     public function table_clients(){
-      $data = [
-        'title' => 'TraversyMVC kamal',
-      ];
+      
+      // $data = [
+      //   'title' => 'TraversyMVC kamal',
+      // ];
+      $data=$this->loginModel->affichage_compte();
+
      
       $this->view('pages/table_clients', $data);
     }
-    public function commantair(){
+    public function table_commantair(){
       $data = [
         'title' => 'TraversyMVC namir',
       ];
      
-      $this->view('pages/commantair', $data);
+      $this->view('pages/table_commantair', $data);
     }
     public function ajoute_produit(){
       $data = [

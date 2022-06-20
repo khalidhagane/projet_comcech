@@ -60,8 +60,9 @@ require_once APPROOT.'/views/inc/head.php';
 
                         <div class="card-body">
                             
-                        <i class="fab fa-product-hunt pe-2 h3 text-info"></i>
-                            <p class="text-secondary">stok de produit</p>
+                        
+                        <i class="far fa-comment-alt pe-2 h3 text-info"></i>
+                            <p class="text-secondary">commantair</p>
                             <div class="d-flex align-items-center float-end">
                                 
                                 <p class="fw-bolder fs-3 ps-1"> 6 </p>

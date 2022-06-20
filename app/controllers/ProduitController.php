@@ -52,5 +52,10 @@ class ProduitController extends Controller{
             redirect('/pages/table_produits');
          }
         }
+
+        public function affichage_count(){
+            $this->produitModel->affichage_count();
+           
+        }
 }
 ?>

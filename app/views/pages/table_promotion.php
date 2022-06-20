@@ -24,7 +24,7 @@ require_once APPROOT.'/views/inc/head.php';
                 <!-- nnavbar -->
                 <div class="bg-light py-2  ">
                         <div class="d-flex  align-items-center  justify-content-center justify-content-sm-between  mt-3">
-                            <h1 class=" fw-bolder d-none d-sm-block mx-3 h5">list de produits promotion</h1>
+                            <h1 class=" fw-bolder d-none d-sm-block mx-3 h5">list de promotion</h1>
                             <div class="d-flex align-items-center">
                                 <i class="far  fa-sort me-3 fs-6 text-info "></i>
                                 
@@ -40,7 +40,7 @@ require_once APPROOT.'/views/inc/head.php';
                                 <div class="table-responsive-sm table-responsive-md  px-4">
 
 
-                                <table class="table  table-borderless ">
+                                <table class="table  table-borderless align-middle">
                                         <thead>
                                             <tr class="text-capitalize  ">
                                                 <th class="text-muted h6 ">image</th>
@@ -63,7 +63,8 @@ require_once APPROOT.'/views/inc/head.php';
                                             ?>
                                             
                                             <tr class="bg-white ">
-                                                <td ><?= $produit->image ?></td>
+                                                <!-- <td ><?= $produit->image ?></td> -->
+                                                <td ><img width="50px" src="<?php echo URLROOT ?>/public/img/image_produit/<?php echo $produit->image ?>" alt=""></td>
                                                 <td><?= $produit->produit ?></td>
                                                 <td><?= $produit->poid ?></td>
                                                 <td><?= $produit->tension?></td>

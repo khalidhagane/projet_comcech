@@ -22,7 +22,7 @@ require_once APPROOT.'/views/inc/head.php';
                 <!-- nnavbar -->
                 <div class="bg-light py-2  ">
                         <div class="d-flex  align-items-center  justify-content-center justify-content-sm-between  mt-3">
-                            <h1 class=" fw-bolder d-none d-sm-block mx-3 h5">list de produits</h1>
+                            <h1 class=" fw-bolder d-none d-sm-block mx-3 h5">list de client</h1>
                             <!-- <div class="d-flex align-items-center">
                                 <i class="far  fa-sort me-3 fs-6 text-info "></i>
                                 
@@ -36,10 +36,10 @@ require_once APPROOT.'/views/inc/head.php';
                         
                             <div class="container ">
                                 <div class="table-responsive-sm table-responsive-md  px-4">
-                                    <table class="table  table-borderless ">
+                                    <table class="table  table-borderless align-middle ">
                                         <thead>
                                             <tr class="text-capitalize  ">
-                                                <th  style="visibility: hidden;" >a</th>
+                                                
                                                 <th class="text-muted h6 ">uesrname</th>
                                                 <th class=" text-muted h6">email ou phone</th>
                                                 
@@ -47,8 +47,30 @@ require_once APPROOT.'/views/inc/head.php';
                                                 <th style="display: none;">a</th>
                                             </tr>
                                         </thead>
+                                        <tbody>
+                                        <?php
+                                       
+                                        foreach($data as $client){
+                                            // var_dump($data);
+                                            // exit;
+                                            ?>
+                                            <tr class="bg-white">
+                                            
+                                                <td><?= $client->username?></td>
+                                                <td><?= $client->email_phone?></td>
+                                                
+                                                
+                                                <!-- <td><a href='#<?php echo $client->id;?>'><i class="fas fa-ban fs-6 text-info"></i></a></td>
+                                                <td><a href='#<?php echo $client->id;?>'><i class="far fa-check-circle fs-6 text-info"></i></a></td> -->
+                                                <!-- <td><a href='<?=URLROOT?>/LoginController/update_produit/<?php echo $client->id;?>'><i class="fal fa-pen fs-6 text-info"></i></a></td> -->
+                                                <td><a href='<?=URLROOT?>/LoginController/delete_compte/<?php echo $client->id;?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>
+                                            </tr>
+                                            <?php
+                                        }
+                                        ?>
+                                    </tbody>
 
-                                        <tbody>                                              
+                                        <!-- <tbody>                                              
                                             
                                                 <?php
                                                     //  
@@ -111,7 +133,7 @@ require_once APPROOT.'/views/inc/head.php';
                                         // }
                                             ?>
 
-                                        </tbody>
+                                        </tbody> -->
                                     </table>
                                 </div>
                             </div>

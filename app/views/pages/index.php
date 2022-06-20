@@ -27,6 +27,7 @@ require_once APPROOT.'/views/inc/navbar.php';
           <div class="row text-center">
               <div class="col-md-4 mt-4">
               <img class="rounded-circle" src="<?=URLROOT?>/img/images/trax2.jpg" height="100px" width="100px" alt="">
+              
                   <h4  style="margin-top: 40px;">AZZDINE HAGANE</h4>
                   <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui.  </p>
               </div>
@@ -67,7 +68,10 @@ require_once APPROOT.'/views/inc/navbar.php';
         <a href="<?=URLROOT?>/PromotionController/get_produitpromotion/<?php echo $produit->id?>" class="text-decoration-none col-sm-12 border-0 shadow col-lg-5 p-2 card d-flex flex-row align-items-center " style=" background: linear-gradient(-0.58deg, #02ACDF -20.73%, #FFFFFF 70.84%);  " >
             
             
-            <img class="h-75 w-25" src="<?=URLROOT?>/img/images/groupe.png" alt="" >
+            <!-- <img class="h-75 w-25" src="<?=URLROOT?>/img/images/groupe.png" alt="" > -->
+            <img class="h-75 w-25" src="<?php echo URLROOT ?>/public/img/image_produit/<?php echo $produit->image ?>" alt="" > 
+
+            
             
                         
                         <div class="d-flex flex-column ps-2">

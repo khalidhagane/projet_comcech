@@ -8,7 +8,7 @@
                     <div class="d-flex flex-column align-items-center ">
                         <img src="<?=URLROOT?>/img/images/log.png" alt="hugenerd" width="90" height="90" class="rounded-circle  mt-1">
                         
-                        <h4 class="text-dark mt-3 h6"> <b> khalid </b></h4>                                            
+                        <h4 class="text-dark mt-3 h6"> <b> <?php if(isset($_SESSION['username'])){echo $_SESSION['username']; }?> </b></h4>                                            
 
                         <p class="text-info m-0">Admin</p>
                     </div>
@@ -29,13 +29,20 @@
                         <li class="mb-2 text-center w-100">
                             <a href="<?=URLROOT?>/pages/table_categure"  class="nav-link  text-dark rounded ">
                             <i class="fab fa-product-hunt pe-2"></i> 
-                                <span class=" d-none d-sm-inline">categures</span>
+                                <span class=" d-none d-sm-inline">Categures</span>
                             </a>
                         </li>
                         <li class="mb-2 text-center w-100" >
                             <a href="<?=URLROOT?>/pages/table_produits"  class="nav-link   text-dark rounded ">
                             <i class="fab fa-product-hunt pe-2"></i>
                                 <span class=" d-none d-sm-inline">Produits</span> 
+                            </a>
+                        </li>
+                        <li class="mb-2 text-center w-100">
+                            <a href="<?=URLROOT?>/pages/table_promotion"  class="nav-link  text-dark rounded ">
+                                <!-- <i class="fal fa-file-chart-line pe-2"></i> -->
+                                <i class="fas fa-box-heart pe-2"></i> 
+                                <span class=" d-none d-sm-inline">Promotion</span>
                             </a>
                         </li>
                         
@@ -47,17 +54,13 @@
                             </a>
                         </li>
                         <li class="mb-2 text-center w-100">
-                            <a href="<?=URLROOT?>/pages/commantair"  class="nav-link  text-dark rounded ">
-                                <i class="fal fa-file-chart-line pe-2"></i> 
-                                <span class=" d-none d-sm-inline">commantair</span>
+                            <a href="<?=URLROOT?>/pages/table_commantair"  class="nav-link  text-dark rounded ">
+                                <!-- <i class="fal fa-file-chart-line pe-2"></i>  -->
+                                <i class="fas fa-comment-alt pe-2"></i>
+                                <span class=" d-none d-sm-inline">Commantair</span>
                             </a>
                         </li>
-                        <li class="mb-2 text-center w-100">
-                            <a href="<?=URLROOT?>/pages/table_promotion"  class="nav-link  text-dark rounded ">
-                                <i class="fal fa-file-chart-line pe-2"></i> 
-                                <span class=" d-none d-sm-inline">promotion</span>
-                            </a>
-                        </li>
+
                         
                         
 

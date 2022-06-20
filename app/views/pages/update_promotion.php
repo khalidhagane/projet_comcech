@@ -36,7 +36,7 @@ require_once APPROOT.'/views/inc/head.php';
                         
                             <div class="container ">
 
-                            <form method="POST" action="<?php echo URLROOT ?>/PromotionController/update_promotion/<?= $data['id']; ?>">
+                            <form method="POST" action="<?php echo URLROOT ?>/PromotionController/update_promotion/<?= $data['id']; ?>" enctype="multipart/form-data" >
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">image</label>
                                         <input type="file" name="image" class="form-control" value='<?php echo $data['image']; ?>'  id="exampleInputEmail1" >

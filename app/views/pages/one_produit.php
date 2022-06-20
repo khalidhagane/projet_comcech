@@ -35,7 +35,7 @@ require_once APPROOT.'/views/inc/navbar.php';
             <span class=" py-2 fs-4 fw-bolder">tarif :</span><span class=" py-2 fs-4 fw-bolder "> <?php echo $data->prix; ?> dh/jour</span><br>
             </div>
             <div class="py-2 d-flex  justify-content-center">
-            <a href="<?=URLROOT?>/PanierController/addproduit_cookie/<?= $data->id?>" type="button" class=" w-100 btn btn-border-comcech rounded px-5 ">Ajoute ou panier</a>
+            <a href="<?=URLROOT?>/PanierController/addproduit_session/<?= $data->id?>" type="button" class=" w-100 btn btn-border-comcech rounded px-5 ">Ajoute ou panier</a>
             
             </div>
             

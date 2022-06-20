@@ -38,17 +38,15 @@ require_once APPROOT.'/views/inc/navbar.php';
                             <span>prix : </span><span class="text-center "><?php echo $produitDetails[3];?> MAD</span>
                         </div>
 
-                        <!-- <div class="d-flex flex-row ">
-                            
+                        <div class="d-flex flex-row ">  
                         <input  type="date" class="form-control border-info" >
-
                         <input  type="date"  class="form-control border-info" >
-                        </div> -->
+                        </div>
 
-
+                        <i class="fas fa-chevron-circle-up" onclick="calcul()"></i>
                         <input onclick="calcul()" type="number" value="1" class="form-control border-info" id="<?php echo $produitDetails[1];?>" prix="<?php echo $produitDetails[3];?>">
+                        <i class="fas fa-chevron-circle-down" onclick="calcul()"></i>
                         <input type="hidden" name="id" value="<?php echo $produitDetails[2];?>" class="id">
-
                         
                     </div>
                     
@@ -68,8 +66,9 @@ require_once APPROOT.'/views/inc/navbar.php';
                     </div>
                 </div>
                 <hr class="my-3" >
-                <div class="d-flex justify-content-center ">
-                    <button type="button" class="btn btn-border-comcech btn-outline-primary  px-5 ">commander</button>
+                <div  class="d-flex justify-content-center ">
+                    <a href="<?=URLROOT?>/pages/signin/" type="button" class="btn btn-border-comcech btn-outline-primary  px-5 ">commander</a>
+                    
                 </div>
             </div>
         </form>

@@ -10,7 +10,7 @@
             
             $this->db->query("INSERT INTO `promotions`( `image`,`produit`, `poid`, `tension`, `puissance`, `longueur`, `prix` ,`prix2` , `description`)
              VALUES (?,?,?,?,?,?,?,?,?)");
-             $this->db->bind(1,$data['image']);
+             $this->db->bind(1,$_FILES['image']['name']);
              $this->db->bind(2,$data['produit']);
              $this->db->bind(3 ,$data['poid']);
              $this->db->bind(4 ,$data['tension']);
@@ -59,7 +59,7 @@
         
             $this->db->query("UPDATE `promotions` SET `image` = ?, `produit` = ?, `poid` = ?, `tension` = ?, `puissance` = ?, `longueur` = ?, `prix` = ?  , `prix2` = ?  ,`description` = ?  WHERE `id` = '$id'") ;
             
-            $this->db->bind(1,$data['image']);
+            $this->db->bind(1,$_FILES['image']['name']);
              $this->db->bind(2,$data['produit']);
              $this->db->bind(3,$data['poid']);
              $this->db->bind(4 ,$data['tension']);

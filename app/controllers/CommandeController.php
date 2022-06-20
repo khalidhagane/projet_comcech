@@ -11,6 +11,17 @@ class CommandeController extends Controller{
         $data = $this->commandeModel->affichage_commande();
     }
 
+    public function addinfo_client_commande(){
+        var_dump($_POST);
+        exit;
+        
+        $data = $_POST;
+        
+        $this->commandeModel->addinfo_client($data);
+       
+        redirect("/pages/inedx");
+    
+    }
 
 
 }

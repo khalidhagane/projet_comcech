@@ -40,7 +40,7 @@ require_once APPROOT.'/views/inc/head.php';
                                 <div class="table-responsive-sm table-responsive-md  px-4">
 
 
-                                <table class="table  table-borderless ">
+                                <table class="table  table-borderless align-middle">
                                         <thead>
                                             <tr class="text-capitalize  ">
                                                 <th class="text-muted h6 ">image</th>

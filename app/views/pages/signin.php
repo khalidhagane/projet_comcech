@@ -19,25 +19,34 @@ require_once APPROOT.'/views/inc/navbar.php';
                     <button type="submit" class="btn bg-white text-info rounded-pill px-3">SIGNIN WITH Facebook</button>
                     </div>
             </div>
+            <form action=""></form>
 
-            <form class="card border-0 w-50 form-signup d-flex p-2  px-md-5">
+            <form method="POST" action="<?= URLROOT ?>/LoginController/signin" class="card border-0 w-50 form-signup d-flex p-2  px-md-5">
+            
                     <span class="fs-2 text-center pb-4">SIGN IN</span>
+
+                    <div>
+                        <?php if(isset($error)){echo "$error";
+                        
+                    }
+                         ?>
+                    </div>
 
                 
                 
                 <div class="mb-3">
-                    <input type="text" class="form-control" id="text" placeholder="Email ou Telephone"  >
+                    <input type="text" name="email_phone" class="form-control" id="text" placeholder="Email ou Telephone"  >
                     
                 </div>
                 <div class="mb-3">
-                    <input type="password" class="form-control" id="password" placeholder="Password" >
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Password" >
                 </div>
                 
                 <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <input type="checkbox"  name="remember" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
-                <button type="submit" class="btn btn-border-comcech ">SIGN IN</button>
+                <input type="submit" name="submit" value="SIGN IN" class="btn btn-border-comcech " >
                 <span class="pt-3">Already have an account. <a class="text-info" href="<?=URLROOT?>/pages/signup">SIGN UP</a>?</span>
             </form>
         </div>

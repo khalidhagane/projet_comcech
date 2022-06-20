@@ -5,11 +5,12 @@ class PanierController extends Controller{
     function __construct(){
 
         $this->panierModel = $this->model('PanierModel'); 
-        
         $this->detailproduitModel = $this->model('DetailproduitModel'); 
     }
 
-     public function addproduit_cookie($id){
+    
+
+    public function addproduit_session($id){
         
         $data = $this->detailproduitModel->affichagedetail_produit($id);
         
@@ -43,6 +44,12 @@ public function deleteproduit_panier($id){   // suprimer un panier
     }
 
 }
+
+// public function rederict_signin(){
+     
+
+
+// }
 
 
 

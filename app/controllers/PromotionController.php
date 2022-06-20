@@ -7,6 +7,8 @@ class PromotionController extends Controller{
 
     public function addpromotion(){
         $data = $_POST;
+        $target_img = dirname(APPROOT) . "/public/img/image_produit/" . $_FILES['image']['name'];
+        move_uploaded_file($_FILES['image']['tmp_name'], $target_img);
         
         
         $this->promotionModel->addpromotion($data);
@@ -38,6 +40,9 @@ class PromotionController extends Controller{
 
          }else if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $data =  $_POST;
+            $target_img = dirname(APPROOT) . "/public/img/image_produit/" . $_FILES['image']['name'];
+        move_uploaded_file($_FILES['image']['tmp_name'], $target_img);
+        
             $this->promotionModel->update_promotion($data,$id);
             redirect('/pages/table_promotion');
          }
