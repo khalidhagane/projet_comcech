@@ -8,10 +8,20 @@ class PanierController extends Controller{
         $this->detailproduitModel = $this->model('DetailproduitModel'); 
     }
 
-    
+    // public function addproduit_panier(){
 
+    //    $data = $_POST;
+    // //    echo true;
+    // //    exit;
+    //     $this->panierModel->addproduitpanier($data);
+    //     // $this->addproduit_session($data);
+
+    // }
+
+
+    
     public function addproduit_session($id){
-        
+       
         $data = $this->detailproduitModel->affichagedetail_produit($id);
         
         if(isset($data)){
@@ -21,11 +31,28 @@ class PanierController extends Controller{
             // setcookie('panier['.$data->id.']', $produit, time() + (3600 * 24), '/');
 
             $_SESSION['panier'][$data->id]=$produit;
-        
+           
         redirect("/pages/panier");
 }
 
 }
+
+//     public function addproduit_session($id){
+       
+//         $data = $this->detailproduitModel->affichagedetail_produit($id);
+        
+//         if(isset($data)){
+
+//             $produit = $data->image . "," .$data->produit . "," .$data->id .','. $data->prix;
+            
+//             // setcookie('panier['.$data->id.']', $produit, time() + (3600 * 24), '/');
+
+//             $_SESSION['panier'][$data->id]=$produit;
+           
+//         redirect("/pages/panier");
+// }
+
+// }
 
 public function deleteproduit_panier($id){   // suprimer un panier
     

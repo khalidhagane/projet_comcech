@@ -1,6 +1,5 @@
 
 <?php
-
 require_once APPROOT.'/views/inc/head.php';
 
 ?>
@@ -58,13 +57,21 @@ require_once APPROOT.'/views/inc/head.php';
                                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
                             </div> -->
                             <div class="mb-3 form-check">
+                            <?php
+                $prix = 0;
+            
+                //  foreach($_SESSION['panier'] as $produit) :
+                //     $produitDetails = explode(',', $produit);
+
+                    // 
+            ?>
                                 <!-- <input type="text" class="form-check-input" id="exampleCheck1"> -->
-                                <input type="hidden" name="image" value="<?php echo $produitDetails[0];?>" >
-                                <input type="hidden" name="produit" value="<?php echo $produitDetails[2];?>" >
-                                <input type="hidden" name="prix" value="<?php echo $produitDetails[3];?>" >
-                                
+                                <!-- <input type="hidden" name="<?php echo $produitDetails['2']; ?>" value="<?php echo $produit ;?>" > -->
+                                <!-- <input type="hidden" name="produit" value="<?php// echo ;?>" >
+                                <input type="hidden" name="prix" value="<?php //echo ;?>" > -->
+                                <?php  //endforeach;  ?>
                             </div>
-                            <input type="submit" name="submit"  class="btn btn-primary" value="submit">
+                            <input type="submit"   class="btn btn-primary" value="submit">
                     </form>
 
                 </div>

@@ -19,7 +19,7 @@ require_once APPROOT.'/views/inc/navbar.php';
                     <button type="submit" class="btn bg-white text-info rounded-pill px-3">SIGNIN WITH Facebook</button>
                     </div>
             </div>
-            <form action=""></form>
+            
 
             <form method="POST" action="<?= URLROOT ?>/LoginController/signin" class="card border-0 w-50 form-signup d-flex p-2  px-md-5">
             

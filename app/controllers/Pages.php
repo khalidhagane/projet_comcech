@@ -6,6 +6,9 @@
       $this->categureModel = $this->model('CategureModel');
       $this->promotionModel = $this->model('PromotionModel');
       $this->loginModel = $this->model('LoginModel');
+      $this->detailproduitModel = $this->model('DetailproduitModel');
+
+      
 
     }
     
@@ -63,9 +66,10 @@
     }
 
     public function one_produit(){
-      $data = [
-        'title' => 'TraversyMVC',
-      ];
+      // $data = [
+      //   'title' => 'TraversyMVC',
+      // ];
+      $data =  $this->detailproduitModel->affichagedetail_produit($id);
      
       $this->view('pages/one_produit', $data);
     }
@@ -106,6 +110,7 @@
     // }
 
     public function panier(){
+
       $data = [
         'title' => 'TraversyMVC halim',
       ];

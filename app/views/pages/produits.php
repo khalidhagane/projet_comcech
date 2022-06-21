@@ -41,7 +41,7 @@ require_once APPROOT.'/views/inc/navbar.php';
                 <div class="px-2 pb-3 d-flex flex-column align-items-center ">
                     <h3 class="text-dark"><?= $produit->produit ?></h3>
                     <p class=" text-center text-dark"> <?= $produit->description?> </p>
-                    <button type="button" class="btn btn-border-comcech btn-outline-primary rounded-pill px-5">Voir produit</button>
+                    <!-- <button type="button" class="btn btn-border-comcech btn-outline-primary rounded-pill px-5">Voir produit</button> -->
                 </div>
             </a>
             <?php

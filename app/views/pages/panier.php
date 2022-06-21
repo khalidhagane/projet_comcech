@@ -10,7 +10,7 @@ require_once APPROOT.'/views/inc/navbar.php';
             <?php
                 $prix = 0;
                  foreach($_SESSION['panier'] as $produit) :
-                    $produitDetails = explode(',', $produit); 
+                    $produitDetails = explode(',', $produit);
             ?>
             <div class="  card  shadow border-0 col-12 col-md-9 mb-3 me-auto" > <!--  style="width: 600px;"  -->
                 <div class="pt-2">
@@ -46,7 +46,7 @@ require_once APPROOT.'/views/inc/navbar.php';
                         <i class="fas fa-chevron-circle-up" onclick="calcul()"></i>
                         <input onclick="calcul()" type="number" value="1" class="form-control border-info" id="<?php echo $produitDetails[1];?>" prix="<?php echo $produitDetails[3];?>">
                         <i class="fas fa-chevron-circle-down" onclick="calcul()"></i>
-                        <input type="hidden" name="id" value="<?php echo $produitDetails[2];?>" class="id">
+                        <input type="hidden" name="id<?php echo $produitDetails[2];?>" value="<?php echo $produitDetails[2];?>" class="id">
                         
                     </div>
                     

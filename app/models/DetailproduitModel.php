@@ -8,6 +8,7 @@
    }
 
    public function affichagedetail_produit($id){
+    
        
     $this->db->query("SELECT * FROM `produits` WHERE `id`=$id ");
     

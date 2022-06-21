@@ -12,8 +12,6 @@ class CommandeController extends Controller{
     }
 
     public function addinfo_client_commande(){
-        var_dump($_POST);
-        exit;
         
         $data = $_POST;
         

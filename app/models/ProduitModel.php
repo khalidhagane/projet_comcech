@@ -67,11 +67,11 @@
             }
         }
 
-        public function affichage_count(){
-            $this->db->query("SELECT * FROM `produits`");
-            return $this->db->resultSet();
+        // public function affichage_count(){
+        //     $this->db->query("SELECT * FROM `produits`");
+        //     return $this->db->resultSet();
         
-        }
+        // }
 
 
     }

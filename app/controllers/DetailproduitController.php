@@ -17,9 +17,10 @@ public function affichagedetail_produit($id){
    
     $data =  $this->detailproduitModel->affichagedetail_produit($id);
    
-    
-    // // redirect("/pages/one_produit",$data);
-    $this->view("/pages/one_produit",$data);
+   
+     $this->view("pages/one_produit",$data);
+    //  redirect("/pages/signin");
+     
    
    
 }
