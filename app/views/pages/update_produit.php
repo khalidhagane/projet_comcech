@@ -70,9 +70,26 @@ require_once APPROOT.'/views/inc/head.php';
                                     <label for="exampleFormControlTextarea1" class="form-label">description</label>
                                     <textarea class="form-control" type="text" name="description"  value='' id="exampleFormControlTextarea1" rows="3"><?php echo $data['description']; ?></textarea>
                                     </div>
+                                    <div class="mb-3 form-check">
+                                    <select id="categure" name="promotion">
+                                    <option value="nopromotion" checked>no promotion</option>
+                                    <option value="promotion">promotion</option>
+                                    
+                                    </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">prix 2</label>
+                                        <input type="number" name="prix2"  class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    </div>
                                     <!-- <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    <label class="form-check-label" for="exampleCheck1">promotio</label>
+                                        <input type="checkbox" name="promotion" class="form-check-input" id="exampleCheck1">
+                                        
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">prix 2</label>
+                                        <input type="number" name="prix2"  class="form-control" id="exampleInputPassword1">
                                     </div> -->
                                     <div>
                                     <select id="categure" name="categure">

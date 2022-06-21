@@ -51,6 +51,8 @@ require_once APPROOT.'/views/inc/head.php';
                                                 <th class=" text-muted h6">longueur</th>
                                                 <th class=" text-muted h6">prix</th>
                                                 <th class=" text-muted h6">description</th>
+                                                <th class=" text-muted h6">promotion</th>
+                                                <th class=" text-muted h6">prix2</th>
                                                 <th class=" text-muted h6">categure</th>
                                                 <th style="display: none;">a</th>
                                                 <th style="display: none;">a</th>
@@ -73,6 +75,8 @@ require_once APPROOT.'/views/inc/head.php';
                                                 <td><?= $produit->longueur?></td>
                                                 <td><?= $produit->prix ?></td>
                                                 <td><?= $produit->description?></td>
+                                                <td><?= $produit->promotion?></td>
+                                                <td><?= $produit->prix2?></td>
                                                 <td><?= $produit->categure?></td>
                                                 <td><a href='<?=URLROOT?>/ProduitController/update_produit/<?php echo $produit->id;?>'><i class="fal fa-pen fs-6 text-info"></i></a></td>
                                                 <td><a href='<?=URLROOT?>/ProduitController/delete_produit/<?php echo $produit->id;?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>

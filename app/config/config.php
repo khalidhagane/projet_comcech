@@ -11,3 +11,6 @@
   define('URLROOT', 'http://localhost/les%20projets/projet_comcech');
   // Site Name
   define('SITENAME', 'Comcech');
+
+
+  session_start();

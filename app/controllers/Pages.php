@@ -4,9 +4,11 @@
       $this->produitModel = $this->model('ProduitModel');
       $this->commandeModel = $this->model('CommandeModel');
       $this->categureModel = $this->model('CategureModel');
-      $this->promotionModel = $this->model('PromotionModel');
+      // $this->promotionModel = $this->model('PromotionModel');
       $this->loginModel = $this->model('LoginModel');
       $this->detailproduitModel = $this->model('DetailproduitModel');
+      $this->panierModel = $this->model('PanierModel'); 
+
 
       
 
@@ -16,7 +18,7 @@
       // $data = [
       //   'title' => 'TraversyMVC',
       // ];
-       $dataList =  $this->promotionModel->affichage_promotion();
+       $dataList =  $this->produitModel->affichage_promotion();
        $data =  $this->categureModel->affichage_categure();
      
       $this->view('pages/index', $data , $dataList );
@@ -111,10 +113,11 @@
 
     public function panier(){
 
-      $data = [
-        'title' => 'TraversyMVC halim',
-      ];
-     
+      $data = $this->panierModel->affichage_produits();
+      // echo '<pre>';
+      // var_dump($data);
+      // echo '</pre>';
+
       $this->view('pages/panier', $data);
     }
     public function table_clients(){

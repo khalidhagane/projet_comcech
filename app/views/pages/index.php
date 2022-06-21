@@ -65,7 +65,7 @@ require_once APPROOT.'/views/inc/navbar.php';
         <?php
                                         foreach($dataList as $produit){
                                             ?>
-        <a href="<?=URLROOT?>/PromotionController/get_produitpromotion/<?php echo $produit->id?>" class="text-decoration-none col-sm-12 border-0 shadow col-lg-5 p-2 card d-flex flex-row align-items-center " style=" background: linear-gradient(-0.58deg, #02ACDF -20.73%, #FFFFFF 70.84%);  " >
+        <a href="<?=URLROOT?>/DetailproduitController/affichagedetail_produit/<?php echo $produit->id?>" class="text-decoration-none col-sm-12 border-0 shadow col-lg-5 p-2 card d-flex flex-row align-items-center " style=" background: linear-gradient(-0.58deg, #02ACDF -20.73%, #FFFFFF 70.84%);  " >
             
             
             <!-- <img class="h-75 w-25" src="<?=URLROOT?>/img/images/groupe.png" alt="" > -->

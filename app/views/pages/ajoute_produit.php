@@ -70,10 +70,17 @@ require_once APPROOT.'/views/inc/head.php';
                                     <label for="exampleFormControlTextarea1" class="form-label">description</label>
                                     <textarea class="form-control" type="text" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
                                     </div>
-                                    <!-- <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                    </div> -->
+                                    <div class="mb-3 form-check">
+                                    <select id="categure" name="promotion">
+                                    <option value="nopromotion" checked>no promotion</option>
+                                    <option value="promotion">promotion</option>
+                                    
+                                    </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">prix 2</label>
+                                        <input type="number" name="prix2"  class="form-control" id="exampleInputPassword1">
+                                    </div>
                                     <div>
                                     <select id="categure" name="categure">
                                     <option value="volvo">Volvo</option>

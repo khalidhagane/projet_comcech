@@ -2,7 +2,6 @@
 
 
 // Start the session
-session_start();
 
 class LoginController extends Controller{
 
