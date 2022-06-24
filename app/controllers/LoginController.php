@@ -27,7 +27,7 @@ class LoginController extends Controller{
         $this->loginModel->addclient_signup($data);
         
 
-        redirect("/pages/produits"); 
+        redirect("/pages/signin"); 
 
     }
     
@@ -55,7 +55,6 @@ class LoginController extends Controller{
                     if(isset($data->email_phone) == $compte['email_phone'] && $data->password1 == $compte['password'])
                     {
                         
-                    
                             $_SESSION['username'] = $data->username;
                             $_SESSION['id'] = $data->id;
                             $_SESSION['role'] = $data->role;
@@ -63,20 +62,21 @@ class LoginController extends Controller{
                             $_SESSION['phone'] = $data->phone;
 
                             if(isset($_SESSION['role'])== $data->role){
-
+                     
                                 $this->view("/pages/dashbord");
                                 exit;
                             }
-                            // else if(isset($_SESSION['phone']) && isset($_SESSION['address']) ){
-
-                            //     // $this->view("/pages/produits",$data);
-                            //     redirect("/pages/produits");
-
-                            // }
-                            
+                            else if($_SESSION['phone'] == "" && $_SESSION['address'] == ""){
+                                // $this->view("/pages/produits",$data);
+                                
                                 $this->view("/pages/info_client");
-                           
 
+                            }else{
+                                
+                                redirect("/pages/produits");
+                            }
+                            
+                                
                             
                     }
                     else

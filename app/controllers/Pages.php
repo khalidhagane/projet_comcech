@@ -101,13 +101,16 @@
     
 
     public function panier(){
-
+      if(!empty($_SESSION['id'])){
       $data = $this->panierModel->affichage_produits();
       // echo '<pre>';
       // var_dump($data);
       // echo '</pre>';
 
       $this->view('pages/panier', $data);
+      }else{
+        redirect("/pages/signin");
+      }
     }
     
     

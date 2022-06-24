@@ -10,7 +10,7 @@ class PanierController extends Controller{
     
     public function ajoute_produitpanier($id){
        
-        if(isset($_SESSION['id'])){
+        if(!empty($_SESSION['id'])){
             $this->panierModel->ajoute_produitpanier($id);
             redirect("/pages/produits");
             

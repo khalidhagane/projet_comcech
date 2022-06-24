@@ -37,6 +37,7 @@ public function affichage_produits(){
 }
 
 public function get_id_produits(){
+  
     $this->db->query("SELECT id_produit FROM `paniers` WHERE id_user = ?");
     $this->db->bind(1,$_SESSION['id']);
     return $this->db->resultSet();

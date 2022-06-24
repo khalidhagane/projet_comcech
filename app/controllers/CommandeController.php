@@ -24,7 +24,6 @@ class CommandeController extends Controller{
         $this->commandeModel->add_commande();
         $this->commandeModel->delete_produit_panier_commande();
         redirect("/pages/produits");
-    
     }
 
 }
