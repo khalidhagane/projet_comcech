@@ -73,9 +73,9 @@ class LoginController extends Controller{
                             //     redirect("/pages/produits");
 
                             // }
-                            else{
+                            
                                 $this->view("/pages/info_client");
-                            }
+                           
 
                             
                     }

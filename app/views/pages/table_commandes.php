@@ -35,7 +35,7 @@ require_once APPROOT.'/views/inc/head.php';
                         <hr>                       
                         
                             <div class="container ">
-                                <div class="table-responsive-sm table-responsive-md  px-4">
+                                <div class="table-responsive px-4 " style="max-height :415px;">
                                     <table class="table  table-borderless ">
                                         <thead>
                                             <tr class="text-capitalize  ">

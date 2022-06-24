@@ -23,15 +23,7 @@
      
       $this->view('pages/index', $data , $dataList );
     }
-    // public function index2(){
-    //   // $data = [
-    //   //   'title' => 'TraversyMVC',
-    //   // ];
-    //   $data =  $this->promotionModel->affichage_promotion();
-       
-     
-    //   $this->view('pages/index', $data );
-    // }
+   
     
 
     public function signin(){
@@ -106,20 +98,7 @@
       $this->view('pages/table_commandes', $data);
     }
 
-    // public function table_commandes(){
-    //   $data = [
-    //     'title' => 'TraversyMVC',
-    //   ];
-     
-    //   $this->view('pages/table_commandes', $data);
-    // }
-    // public function slaid(){
-    //   $data = [
-    //     'title' => 'TraversyMVC jamal',
-    //   ];
-     
-    //   $this->view('pages/slaid', $data);
-    // }
+    
 
     public function panier(){
 
@@ -131,15 +110,7 @@
       $this->view('pages/panier', $data);
     }
     
-    public function table_clients(){
-      
-      // $data = [
-      //   'title' => 'TraversyMVC kamal',
-      // ];
-      $data=$this->loginModel->affichage_compte();
-
-      $this->view('pages/table_clients', $data);
-    }
+    
 
     public function table_commantair(){
       // $data = [
@@ -216,45 +187,7 @@
       
     }
 
-    // public function table_promotion(){
-    //   // $data = [
-    //   //   'title' => 'TraversyMVC',
-    //   // ];
-    //   $data =  $this->promotionModel->affichage_promotion();
-        
-    //   $this->view('pages/table_promotion', $data);
-    // }
-
-    // public function ajoute_promotion(){
-    //   $data = [
-    //     'title' => 'TraversyMVC samir',
-    //   ];
-     
-    //   $this->view('pages/ajoute_promotion', $data);
-    // }
-
-    // public function update_promotion(){
-    //   $data = [
-    //     'title' => 'update Produit'
-    //   ];
-
-    //   $this->view('pages/update_promotion', $data);
-    // }
-
-    // public function affichage_groupeproduit(){
-      
-    //   $this->view('pages/index', $data);
-    // }
     
-    
-
-    // public function about(){
-    //   $data = [
-    //     'title' => 'About Us'
-    //   ];
-
-    //   $this->view('pages/about', $data);
-    // }
 
 
   }
