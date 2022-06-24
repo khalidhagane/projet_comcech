@@ -36,7 +36,7 @@
 
     public function signin(){
       $data = [
-        'title' => 'TraversyMVC',
+        'errorR' => 'this is required',
       ];
      
       $this->view('pages/signin', $data);
@@ -55,9 +55,12 @@
         'title' => 'TraversyMVC',
       ];
       //  $data=$this->produitModel->affichage_count();
-     
+      if($_SESSION['role'] == 'admin'){
      
       $this->view('pages/dashbord', $data);
+    }else{
+      redirect("/pages/index");
+  }
     }
 
     public function produits(){
@@ -80,9 +83,13 @@
       // $data = [
       //   'title' => 'TraversyMVC',
       // ];
+      if($_SESSION['role'] == 'admin'){
       $data =  $this->produitModel->affichage_produit();
         
-      $this->view('pages/table_produits', $data);
+        $this->view('pages/table_produits', $data);
+      }else{
+        redirect("/pages/index");
+    }
     }
 
 
@@ -90,8 +97,11 @@
       // $data = [
       //   'title' => 'TraversyMVC',
       // ];
+      if($_SESSION['role'] == 'admin'){
       $data =  $this->commandeModel->affichage_commande();
-      
+    }else{
+      redirect("/pages/index");
+  }
         
       $this->view('pages/table_commandes', $data);
     }
@@ -120,6 +130,7 @@
 
       $this->view('pages/panier', $data);
     }
+    
     public function table_clients(){
       
       // $data = [
@@ -127,37 +138,51 @@
       // ];
       $data=$this->loginModel->affichage_compte();
 
-     
       $this->view('pages/table_clients', $data);
     }
+
     public function table_commantair(){
-      $data = [
-        'title' => 'TraversyMVC namir',
-      ];
+      // $data = [
+      //   'title' => 'TraversyMVC namir',
+      // ];
      
       $this->view('pages/table_commantair', $data);
     }
+
     public function ajoute_produit(){
-      $data = [
-        'title' => 'TraversyMVC samir',
-      ];
-     
+      // $data = [
+      //   'title' => 'TraversyMVC samir',
+      // ];
+      if($_SESSION['role'] == 'admin'){
       $this->view('pages/ajoute_produit', $data);
+    }else{
+
+      redirect("/pages/index");
+  }
     }
+
     public function update_produit(){
       $data = [
         'title' => 'update Produit'
       ];
-
+      if($_SESSION['role'] == 'admin'){
       $this->view('pages/update_produit', $data);
+    }else{
+      redirect("/pages/index");
+  }
     }
+
     public function update_categure(){
       $data = [
         'title' => 'update categure'
       ];
-
+      if($_SESSION['role'] == 'admin'){
       $this->view('pages/update_categure', $data);
+    }else{
+      redirect("/pages/index");
+  }
     }
+
     public function info_client(){
       $data = [
         'title' => 'update Produit'
@@ -165,46 +190,56 @@
 
       $this->view('pages/info_client', $data);
     }
+
     public function ajoute_categure(){
       $data = [
         'title' => 'update Produit'
       ];
-
+      if($_SESSION['role'] == 'admin'){
       $this->view('pages/ajoute_categure', $data);
+    }else{
+      redirect("/pages/index");
+  }
     }
   
     public function table_categure(){
       // $data = [
       //   'title' => 'table_categure'
       // ];
+      if($_SESSION['role'] == 'admin'){
       $data =  $this->categureModel->affichage_categure();
 
       $this->view('pages/table_categure', $data);
+    }else{
+      redirect("/pages/index");
+  }
       
     }
-    public function table_promotion(){
-      // $data = [
-      //   'title' => 'TraversyMVC',
-      // ];
-      $data =  $this->promotionModel->affichage_promotion();
+
+    // public function table_promotion(){
+    //   // $data = [
+    //   //   'title' => 'TraversyMVC',
+    //   // ];
+    //   $data =  $this->promotionModel->affichage_promotion();
         
-      $this->view('pages/table_promotion', $data);
-    }
+    //   $this->view('pages/table_promotion', $data);
+    // }
 
-    public function ajoute_promotion(){
-      $data = [
-        'title' => 'TraversyMVC samir',
-      ];
+    // public function ajoute_promotion(){
+    //   $data = [
+    //     'title' => 'TraversyMVC samir',
+    //   ];
      
-      $this->view('pages/ajoute_promotion', $data);
-    }
-    public function update_promotion(){
-      $data = [
-        'title' => 'update Produit'
-      ];
+    //   $this->view('pages/ajoute_promotion', $data);
+    // }
 
-      $this->view('pages/update_promotion', $data);
-    }
+    // public function update_promotion(){
+    //   $data = [
+    //     'title' => 'update Produit'
+    //   ];
+
+    //   $this->view('pages/update_promotion', $data);
+    // }
 
     // public function affichage_groupeproduit(){
       
@@ -213,13 +248,13 @@
     
     
 
-    public function about(){
-      $data = [
-        'title' => 'About Us'
-      ];
+    // public function about(){
+    //   $data = [
+    //     'title' => 'About Us'
+    //   ];
 
-      $this->view('pages/about', $data);
-    }
+    //   $this->view('pages/about', $data);
+    // }
 
 
   }

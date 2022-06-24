@@ -40,12 +40,13 @@ require_once APPROOT.'/views/inc/head.php';
                                         <thead>
                                             <tr class="text-capitalize  ">
                                                 
-                                                <th class="text-muted h6 ">image</th>
-                                                <th class=" text-muted h6">produit</th>
-                                                <th class=" text-muted h6">quantité</th>
-                                                <th class="text-muted h6">client</th>
+                                                <!-- <th class="text-muted h6 ">image</th> -->
+                                                
+                                                <th class="text-muted h6">name</th>
                                                 <th class=" text-muted h6">address</th>
                                                 <th class=" text-muted h6">phone</th>
+                                                <th class=" text-muted h6">produit</th>
+                                                <th class=" text-muted h6">quantité</th>
                                                 <th class=" text-muted h6">prix</th>
                                                 <th style="display: none;">a</th>
                                                 <th style="display: none;">a</th>
@@ -59,12 +60,13 @@ require_once APPROOT.'/views/inc/head.php';
                                         foreach($data as $commande){
                                             ?>
                                             <tr class="bg-white">
-                                                <td><?= $commande->image ?></td>
-                                                <td><?= $commande->produit ?></td>
-                                                <td><?= $commande->quantite?></td>
-                                                <td><?= $commande->client ?></td>
+                                                
+                                               
+                                            <td><?= $commande->name ?></td>
                                                 <td><?= $commande->address?></td>
                                                 <td><?= $commande->phone ?></td>
+                                                <td><?= $commande->produit ?></td>
+                                                <td><?= $commande->quantite?></td>
                                                 <td><?= $commande->prix ?></td>
                                                 
                                                 <td><a href='#<?php echo $commande->id;?>'><i class="fas fa-ban fs-6 text-info"></i></a></td>

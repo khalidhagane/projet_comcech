@@ -5,8 +5,6 @@ class CategureController extends Controller{
         $this->categureModel = $this->model('CategureModel');
         
     }
-
-
     public function addcategure(){
         $data = $_POST;
 
@@ -26,7 +24,6 @@ class CategureController extends Controller{
     
     public function delete_categure($id){
         
-        
         $this->categureModel->delete_categure($id);
         
         redirect("/pages/table_categure");
@@ -34,7 +31,6 @@ class CategureController extends Controller{
 
     public function update_categure($id){
         
-     
         if($_SERVER['REQUEST_METHOD'] == 'GET'){
             $produit = $this->categureModel->get_categure($id);
             $this->view('pages/update_categure',(array) $produit);
@@ -53,11 +49,7 @@ class CategureController extends Controller{
    
             $data =  $this->categureModel->affichage_groupeproduit($categure);
             
-           
-            
-            // // redirect("/pages/one_produit",$data);
             $this->view("/pages/produits",$data);
-           
            
         }
         

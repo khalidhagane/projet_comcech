@@ -22,20 +22,27 @@
                         <a class="nav-link  dropdown-toggle text-dark hover-navbar " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class=" fas fa-list-alt me-1"></i>Produits</a>
 
                         <ul class="dropdown-menu drop-navbar  " aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item fw-bolder text-white hover-drop" href="#">inerge</a></li>
-                            <li><a class="dropdown-item  fw-bolder text-white hover-drop" href="#">sodage</a></li>
-                            <li><a class="dropdown-item fw-bolder text-white hover-drop" href="#">traveux public</a></li>
-                            <li>
+                        <li><a class="dropdown-item  fw-bolder text-white hover-drop" href="<?=URLROOT?>/pages/produits">Produits</a></li>
+                            <li><a class="dropdown-item fw-bolder text-white hover-drop" href="#">Outélle de soudage</a></li>
+                            <li><a class="dropdown-item  fw-bolder text-white hover-drop" href="#">Moteur éléctrogéne</a></li>
+                            <li><a class="dropdown-item  fw-bolder text-white hover-drop" href="#">Aire compréseure</a></li>
+                            <li><a class="dropdown-item  fw-bolder text-white hover-drop" href="#">Les échelle</a></li>
+                            <li><a class="dropdown-item  fw-bolder text-white hover-drop" href="#">Echafoudage metalique</a></li>
+                            <li><a class="dropdown-item  fw-bolder text-white hover-drop" href="#">Outille de massonié</a></li>
+
+                            <!-- <li><a class="dropdown-item fw-bolder text-white hover-drop" href="#">traveux public</a></li> -->
+                            <!-- <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">traveux public</a></li>
+                            <li><a class="dropdown-item" href="#">traveux public</a></li> -->
                         </ul>
 
                         <li class="nav-item dropdown ">
                         <a class="nav-link  dropdown-toggle text-dark hover-navbar " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user me-1"></i>Login</a>
                         <ul class="dropdown-menu drop-navbar  " aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item fw-bolder text-white hover-drop" href="<?=URLROOT?>/pages/signup"> <i class="far fa-user-plus"></i> Signup</a></li>
                             <li><a class="dropdown-item  fw-bolder text-white hover-drop" href="<?=URLROOT?>/pages/signin"> <i class="far fa-sign-in"></i> Signin</a></li>
+                            <li><a class="dropdown-item fw-bolder text-white hover-drop" href="<?=URLROOT?>/pages/signup"> <i class="far fa-user-plus"></i> Signup</a></li>
+                            
                         </ul>
                             
                     </li>
@@ -43,7 +50,7 @@
                     </li>
                     <li class="nav-item  d-flex flex-row">
                         <span class="d-flex align-items-center ps-2 pe-1">|</span>
-                        <a class="nav-link text-dark hover-navbar" aria-current="page" href="<?=URLROOT?>/pages/index">  <i class="fas fa-sign-out-alt"></i> Logout</a>
+                        <a class="nav-link text-dark hover-navbar" aria-current="page" href="<?=URLROOT?>/LoginCnontroller/logout">  <i class="fas fa-sign-out-alt"></i> Logout</a>
                     </li>
                 </ul>
 

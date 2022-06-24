@@ -1,6 +1,7 @@
 
 <?php
 require_once APPROOT.'/views/inc/head.php';
+
 ?>
 <div class="container-fluid">
 
@@ -23,12 +24,12 @@ require_once APPROOT.'/views/inc/head.php';
                 <!-- nnavbar -->
                 <div class="bg-light py-2  ">
                         <div class="d-flex  align-items-center  justify-content-center justify-content-sm-between  mt-3">
-                            <h1 class=" fw-bolder d-none d-sm-block mx-3 h5">list de produits</h1>
+                            <h1 class=" fw-bolder d-none d-sm-block mx-3 h5">list de promotion</h1>
                             <div class="d-flex align-items-center">
                                 <i class="far  fa-sort me-3 fs-6 text-info "></i>
                                 
-                                    <a href="<?=URLROOT?>/pages/ajoute_produit"  class=" btn btn-info  text-white text-uppercase mx-4 py-2 " >
-                                        add new produit
+                                    <a href="<?=URLROOT?>/pages/ajoute_promotion"  class=" btn btn-info  text-white text-uppercase mx-4 py-2 " >
+                                        add new produit 
                                     </a> 
                                 
                             </div>
@@ -39,7 +40,7 @@ require_once APPROOT.'/views/inc/head.php';
                                 <div class="table-responsive-sm table-responsive-md  px-4">
 
 
-                                <table class="table  table-borderless align-middle ">
+                                <table class="table  table-borderless align-middle">
                                         <thead>
                                             <tr class="text-capitalize  ">
                                                 <th class="text-muted h6 ">image</th>
@@ -48,11 +49,10 @@ require_once APPROOT.'/views/inc/head.php';
                                                 <th class=" text-muted h6">tension</th>
                                                 <th class="text-muted h6">puissance</th>
                                                 <th class=" text-muted h6">longueur</th>
-                                                <th class=" text-muted h6">prix</th>
-                                                <th class=" text-muted h6">description</th>
-                                                <th class=" text-muted h6">promotion</th>
+                                                <th class=" text-muted h6">prix </th>
                                                 <th class=" text-muted h6">prix2</th>
-                                                <th class=" text-muted h6">categure</th>
+                                                <th class=" text-muted h6">description</th>
+                                                
                                                 <th style="display: none;">a</th>
                                                 <th style="display: none;">a</th>
                                             </tr>
@@ -60,25 +60,22 @@ require_once APPROOT.'/views/inc/head.php';
                                     <tbody>
                                         <?php
                                         foreach($data as $produit){
-                                           
-           
                                             ?>
-                                           
+                                            
                                             <tr class="bg-white ">
+                                                <!-- <td ><?= $produit->image ?></td> -->
                                                 <td ><img width="50px" src="<?php echo URLROOT ?>/public/img/image_produit/<?php echo $produit->image ?>" alt=""></td>
-                                    
                                                 <td><?= $produit->produit ?></td>
                                                 <td><?= $produit->poid ?></td>
                                                 <td><?= $produit->tension?></td>
                                                 <td><?= $produit->puissance ?></td>
                                                 <td><?= $produit->longueur?></td>
                                                 <td><?= $produit->prix ?></td>
+                                                <td><?= $produit->prix2 ?></td>
                                                 <td><?= $produit->description?></td>
-                                                <td><?= $produit->promotion?></td>
-                                                <td><?= $produit->prix2?></td>
-                                                <td><?= $produit->categure?></td>
-                                                <td><a href='<?=URLROOT?>/ProduitController/update_produit/<?php echo $produit->id;?>'><i class="fal fa-pen fs-6 text-info"></i></a></td>
-                                                <td><a href='<?=URLROOT?>/ProduitController/delete_produit/<?php echo $produit->id;?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>
+                                                
+                                                <td><a href='<?=URLROOT?>/PromotionController/update_promotion/<?php echo $produit->id;?>'><i class="fal fa-pen fs-6 text-info"></i></a></td>
+                                                <td><a href='<?=URLROOT?>/PromotionController/delete_promotion/<?php echo $produit->id;?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>
 
                                             </tr>
                                            

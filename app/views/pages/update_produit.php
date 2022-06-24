@@ -93,10 +93,12 @@ require_once APPROOT.'/views/inc/head.php';
                                     </div> -->
                                     <div>
                                     <select id="categure" name="categure">
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="fiat" selected>Fiat</option>
-                                    <option value="audi">Audi</option>
+                                    <option value="soudage">Outélle de soudage</option>
+                                    <option value="moteur">Moteur éléctrogéne</option>
+                                    <option value="compreseure" selected>Aire compréseure</option>
+                                    <option value="echelle">les échelle</option>
+                                    <option value="Echafoudage">Echafoudage metalique</option>
+                                    <option value="massonié">Outille de massonié</option>
                                     </select>
                                     </div>
                                     <input type="submit" name="submit"  class="btn btn-primary" value="submit">

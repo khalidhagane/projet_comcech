@@ -8,7 +8,7 @@ require_once APPROOT.'/views/inc/navbar.php';
         
         <div class= " card d-flex flex-row justify-content-center align-items-center div-signup shadow border-0 w-100 vh-75 mt-3  ">
 
-            <div class=" d-none  d-md-block  w-50 h-100 bg-info  card border px-5 py-4 div-login    " style="width: 50px;" >
+            <div class=" d-none  d-md-block  w-50 h-100 bg-info  card border px-5 py-4 div-login   d-none d-md-block " style="width: 50px;" >
                 <h1 class="mt-5 text-center text-white ">Welcome user</h1>
                 <p class="text-center text-white py-3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -24,15 +24,7 @@ require_once APPROOT.'/views/inc/navbar.php';
             <form method="POST" action="<?= URLROOT ?>/LoginController/signin" class="card border-0 w-50 form-signup d-flex p-2  px-md-5">
             
                     <span class="fs-2 text-center pb-4">SIGN IN</span>
-
-                    <div>
-                        <?php if(isset($error)){echo "$error";
-                        
-                    }
-                         ?>
-                    </div>
-
-                
+                    
                 
                 <div class="mb-3">
                     <input type="text" name="email_phone" class="form-control" id="text" placeholder="Email ou Telephone"  >

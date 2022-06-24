@@ -38,13 +38,13 @@
                                 <span class=" d-none d-sm-inline">Produits</span> 
                             </a>
                         </li>
-                        <li class="mb-2 text-center w-100">
+                        <!-- <li class="mb-2 text-center w-100">
                             <a href="<?=URLROOT?>/pages/table_promotion"  class="nav-link  text-dark rounded ">
-                                <!-- <i class="fal fa-file-chart-line pe-2"></i> -->
+                                <i class="fal fa-file-chart-line pe-2"></i>
                                 <i class="fas fa-box-heart pe-2"></i> 
                                 <span class=" d-none d-sm-inline">Promotion</span>
                             </a>
-                        </li>
+                        </li> -->
                         
 
                         <li class="mb-2 text-center w-100" >
@@ -65,7 +65,7 @@
                         
 
                         <li class="mt-2 text-center w-100 " >
-                            <a href="logout.php" class=" nav-link  text-dark rounded ">
+                            <a href="<?=URLROOT?>/LoginCnontroller/logout" class=" nav-link  text-dark rounded ">
                                 <span class=" d-none d-sm-inline pe-3 ">Logout</span>
                                 <i class="fal fa-sign-out-alt "></i>
                             </a>

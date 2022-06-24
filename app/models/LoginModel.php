@@ -30,8 +30,7 @@ public function delete_compte($id){
 
 
         public function addclient_signup($data){
-            
-            
+          
             $this->db->query("INSERT INTO `copmtes`( `username`, `email_phone`,`password1`,`password2`) VALUES (?,?,?,?)");
              $this->db->bind(1,$data['username']);
              $this->db->bind(2,$data['email_phone']);
@@ -67,4 +66,42 @@ public function delete_compte($id){
 
 
         }
+
+        
+        public function updateclient_entre_info($data , $id){
+            // UPDATE `produits` SET `id`='[value-1]',`produit`='[value-2]',`poid`='[value-3]',`tension`='[value-4]',`puissance`='[value-5]',`longueur`='[value-6]',`prix`='[value-7]',`image`='[value-8]' WHERE 1
+            
+            $this->db->query("UPDATE `copmtes` SET `phone` = ? , `address` = ?  WHERE `id` = ?") ;
+            
+            
+            $this->db->bind(1 ,$data['phone']);
+             $this->db->bind(2 ,$data['address']);
+             $this->db->bind(3 ,$id);
+             $this->db->execute();
+
+             
+             
+             
+            //  $this->db->execute(array(
+ 
+            //     ':image' => ['image'],
+            //     ':produit' => ['produit'],
+            //     ':poid' => ['poid'],
+            //     ':tension' => ['tension'],
+            //     ':puissance' => ['puissance'],
+            //     ':longueur' => ['longueur'],
+            //     ':prix' => ['prix'],
+            //     ));
+             
+
+            // try{
+            //     $this->db->execute();
+            
+            // }
+            // catch(Exception $e){
+            //     return $e->getMessage();
+            // }
+
+        }
+
     }
