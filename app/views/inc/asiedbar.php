@@ -47,12 +47,12 @@
                         </li> -->
                         
 
-                        <li class="mb-2 text-center w-100" >
+                        <!-- <li class="mb-2 text-center w-100" >
                             <a href="<?=URLROOT?>/pages/table_clients" class="nav-link  text-dark rounded ">
                             <i class="fas fa-users-crown pe-2"></i>
                                 <span class=" d-none d-sm-inline">Clients</span>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="mb-2 text-center w-100">
                             <a href="<?=URLROOT?>/pages/table_commantair"  class="nav-link  text-dark rounded ">
                                 <!-- <i class="fal fa-file-chart-line pe-2"></i>  -->

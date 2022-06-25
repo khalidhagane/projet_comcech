@@ -18,8 +18,8 @@ class CategureController extends Controller{
 
     public function affichage_categure(){
         
-         $data =  $this->categureModel->affichage_categure();
-         
+         $produit =  $this->categureModel->affichage_categure();
+         $this->view('pages/update_categure',(array) $produit);
     }
     
     public function delete_categure($id){

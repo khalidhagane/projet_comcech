@@ -91,16 +91,28 @@ require_once APPROOT.'/views/inc/head.php';
                                         <label for="exampleInputPassword1" class="form-label">prix 2</label>
                                         <input type="number" name="prix2"  class="form-control" id="exampleInputPassword1">
                                     </div> -->
+                                    
+                                    
                                     <div>
-                                    <select id="categure" name="categure">
-                                    <option value="soudage">Outélle de soudage</option>
-                                    <option value="moteur">Moteur éléctrogéne</option>
-                                    <option value="compreseure" selected>Aire compréseure</option>
-                                    <option value="echelle">les échelle</option>
-                                    <option value="Echafoudage">Echafoudage metalique</option>
-                                    <option value="massonié">Outille de massonié</option>
+                                        <label for="">categurie</label>
+                                    <select id="categure " class="form-control" name="categure">
+                                        <option ><?= $data['categure']?></option>
+                                <?php
+                                     foreach($categures as $categure){?>
+                                    <option ><?= $categore->categure?></option>
+                                    <?php }
+                                    
+
+                                    
+                                    ?>
                                     </select>
                                     </div>
+                                    <?php
+                                    // echo"<pre>";
+                                    //  var_dump($gategures);
+                                    //  echo"</pre>";
+                                    // exit;
+                                    ?>
                                     <input type="submit" name="submit"  class="btn btn-primary" value="submit">
                             </form>
 

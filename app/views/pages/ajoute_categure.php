@@ -43,7 +43,7 @@ require_once APPROOT.'/views/inc/head.php';
                                         
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label"> categure</label>
+                                        <label for="exampleInputPassword1" class="form-label"> Produit</label>
                                         <input type="text" name="produit"  class="form-control" id="exampleInputPassword1">
                                     </div>
                                     <!-- <div class="mb-3">

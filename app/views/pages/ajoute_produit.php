@@ -83,7 +83,7 @@ require_once APPROOT.'/views/inc/head.php';
                                     </div>
                                     <div>
                                     <select id="categure" name="categure">
-                                    <option value="soudage">Outélle de soudage</option>
+                                    <option value="soudage">Outils de soudage</option>
                                     <option value="moteur">Moteur éléctrogéne</option>
                                     <option value="compreseure" selected>Aire compréseure</option>
                                     <option value="echelle">les échelle</option>

@@ -128,7 +128,7 @@
       //   'title' => 'TraversyMVC samir',
       // ];
       if($_SESSION['role'] == 'admin'){
-      $this->view('pages/ajoute_produit', $data);
+      $this->view('pages/ajoute_produit');
     }else{
 
       redirect("/pages/index");
@@ -169,6 +169,7 @@
       $data = [
         'title' => 'update Produit'
       ];
+      
       if($_SESSION['role'] == 'admin'){
       $this->view('pages/ajoute_categure', $data);
     }else{
