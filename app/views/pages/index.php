@@ -251,80 +251,14 @@ require_once APPROOT.'/views/inc/navbar.php';
                     ?>
 
                     <div class="d-flex flex-column justify-content-between col-ms-11  col-md-5 col-lg-3  p-0 card  border-0 shadow gap-3  ">
-                        
-                        <!-- <img  class="h-50 w-100 rounded-top " src="<?=URLROOT?>/img/images/trax2.jpg" alt="img"> -->
                         <img class="h-50 w-100 rounded-top " src="<?php echo URLROOT ?>/public/img/categure_img/<?php echo $produit->image ?>" alt="">
-
                         <div class="px-2 ">
-                            <h3 class=""><?php echo $produit->produit?></h3>
+                            <h3 class=""><?php echo $produit->categure?></h3>
                             <p class="mb-2"> <?php echo $produit->description?></p>
-                            
                         </div >
                         <a href="<?=URLROOT?>/CategureController/affichage_groupeproduit/<?php echo $produit->categure?>"  class="btn btn-border-comcech btn-outline-primary fw-bolder rounded-0 border-0 border-top "> Voir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <?php
-                    
-                                                }
-                                                ?> 
-            
-                
-                <!-- <div class="d-flex flex-column justify-content-between col-ms-11  col-md-5  col-lg-3  p-0 card  border-0 shadow gap-3  ">
-                    
-                    <img  class="h-50 w-100 rounded-top " src="<?=URLROOT?>/img/images/groupe1.Jpg" alt="img">
-
-                    <div class="px-2 ">
-                        <h3 class="">les generateur</h3>
-                        <p class="mb-2"> Compactage, terrassement et matériel terrassement et matériel de chantier </p>
-                        
-                    </div>
-                    <button type="button" class="btn btn-border-comcech btn-outline-primary fw-bolder rounded-0 border-0 border-top   "> Voir plus <i class="fas fa-arrow-right"></i></button>
-                </div>
-
-                <div class="d-flex flex-column justify-content-between col-ms-11  col-md-5  col-lg-3  p-0 card  border-0 shadow gap-3  ">
-                    
-                    <img  class="h-50 w-100 rounded-top" src="<?=URLROOT?>/img/images/perforateurss.png" alt="img">
-
-                    <div class="px-2 ">
-                        <h3 class="">perforateur</h3>
-                        <p class="mb-2"> Compactage, terrassement et matériel terrassement et matériel de chantier </p>
-                        
-                    </div>
-                    <button type="button" class="btn btn-border-comcech btn-outline-primary fw-bolder rounded-0 border-0 border-top   "> Voir plus <i class="fas fa-arrow-right"></i></button>
-                </div>
-                <div class="d-flex flex-column justify-content-between col-ms-11  col-md-5  col-lg-3  p-0 card  border-0 shadow gap-3  ">
-                    
-                    <img  class="h-50 w-100 rounded-top" src="<?=URLROOT?>/img/images/hilti1.jpg" alt="img">
-
-                    <div class="px-2 ">
-                        <h3 class="">hilti</h3>
-                        <p class="mb-2"> Compactage, terrassement et matériel terrassement et matériel de chantier </p>
-
-                    </div>
-                    <button type="button" class="btn btn-border-comcech btn-outline-primary fw-bolder rounded-0 border-0 border-top   "> Voir plus <i class="fas fa-arrow-right"></i></button>
-                </div>
-                <div class="d-flex flex-column justify-content-between col-ms-11  col-md-5  col-lg-3  p-0 card  border-0 shadow gap-3  ">
-                    
-                    <img  class="h-50 w-100 rounded-top" src="<?=URLROOT?>/img/images/bt.jpg" alt="img">
-
-                    <div class="px-2 ">
-                        <h3 class="">botonia</h3>
-                        <p class="mb-2"> Compactage, terrassement et matériel terrassement et matériel de chantier </p>
-                        
-                    </div>
-                    <button type="button" class="btn btn-border-comcech btn-outline-primary fw-bolder rounded-0 border-0 border-top   "> Voir plus <i class="fas fa-arrow-right"></i></button>
-                </div>
-                <div class="d-flex flex-column justify-content-between col-ms-11  col-md-5  col-lg-3  p-0 card  border-0 shadow gap-3  ">
-                    
-                    <img  class="h-50 w-100 rounded-top" src="<?=URLROOT?>/img/images/la muele.jpg" alt="img">
-
-                    <div class="px-2 ">
-                        <h3 class="">la muele</h3>
-                        <p class="mb-2"> Compactage, terrassement et matériel terrassement et matériel de chantier </p>
-                        
-                    </div>
-                    <button type="button" class="btn btn-border-comcech btn-outline-primary fw-bolder rounded-0 border-0 border-top   "> Voir plus <i class="fas fa-arrow-right"></i></button>
-                </div> -->
-            
+                    <?php }?> 
             </div>
         
     </div>

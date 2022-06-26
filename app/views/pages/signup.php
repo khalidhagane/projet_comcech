@@ -35,11 +35,11 @@ require_once APPROOT.'/views/inc/navbar.php';
                     
                 </div>
                 <div class="mb-3">
-                    <input type="password1" name="password1" class="form-control" id="password1" placeholder="Password" >
+                    <input type="password" name="password1" class="form-control" id="password1" placeholder="Password" >
                     <span class="errorP1" ></span><!--js-->
                 </div>
                 <div class="mb-3">
-                    <input type="password2" name="password2" class="form-control" id="password2" placeholder=" Password" >
+                    <input type="password" name="password2" class="form-control" id="password2" placeholder=" Password" >
                     <span class="errorP2" ></span><!--js-->
                     
                 </div>

@@ -8,13 +8,12 @@
    }
         public function addcategure($data){
             
-            $this->db->query("INSERT INTO `categures`( `image`,`produit`, `description`,`categure`)
-             VALUES (?,?,?,?)");
+             $this->db->query("INSERT INTO `categures`( `image`,`categure`, `description`)
+             VALUES (?,?,?)");
              $this->db->bind(1,$_FILES['image']['name']);
-             $this->db->bind(2 ,$data['produit']);
+             $this->db->bind(2 ,$data['categure']);
              $this->db->bind(3 ,$data['description']);
-             $this->db->bind(4 ,$data['categure']);
-
+            
             try{
                 $this->db->execute();
             
@@ -52,26 +51,11 @@
         
 
         public function update_categure($data , $id){
-            // UPDATE `produits` SET `id`='[value-1]',`produit`='[value-2]',`poid`='[value-3]',`tension`='[value-4]',`puissance`='[value-5]',`longueur`='[value-6]',`prix`='[value-7]',`image`='[value-8]' WHERE 1
-            
-            $this->db->query("UPDATE `categures` SET `image` = ? , `produit` = ? ,`description` = ? ,`categure` = ? WHERE `id` = '$id'") ;
-            
+
+            $this->db->query("UPDATE `categures` SET `image` = ? , `categure` = ? ,`description` = ?  WHERE `id` = '$id'") ;
             $this->db->bind(1,$_FILES['image']['name']);
-            $this->db->bind(2 ,$data['produit']);
+            $this->db->bind(2 ,$data['categure']);
              $this->db->bind(3 ,$data['description']);
-             $this->db->bind(4 ,$data['categure']);
-             
-             
-            //  $this->db->execute(array(
- 
-            //     ':image' => ['image'],
-            //     ':produit' => ['produit'],
-            //     ':poid' => ['poid'],
-            //     ':tension' => ['tension'],
-            //     ':puissance' => ['puissance'],
-            //     ':longueur' => ['longueur'],
-            //     ':prix' => ['prix'],
-            //     ));
              
 
             try{
@@ -93,36 +77,21 @@
         }
         
 
-//   $this->db->query("INSERT INTO `produits`( `produit`, `poid`, `tension`, `puissance`, `longueur`, `prix`)
-// VALUES (':produit',':poid',':tension',':puissance',':longueur',':prix')");
-// //  $this->db->bind(1 ,$data['imame']);
-//  $this->db->bind(1 ,24343 );
-//  $this->db->bind(2 ,234534);
-//  $this->db->bind(3 ,34656);
-//  $this->db->bind(4 ,35645);
-//  $this->db->bind(5 ,34654);
-//  $this->db->bind(6 ,345645);
- 
-        // _______________________
-        // public function addAdmin($model){
-        //     $this->db->query("INSERT INTO admins(roleAdmin,name, lname,salary,depot,CIN,phone,email,password) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,?)");//:name,:email,:phone,:address
 
-        //     $this->db->bind(1 ,$model['roleAdmin']);
-        //     $this->db->bind(2 ,$model['name']);
-        //     $this->db->bind(3 ,$model['lname']);
-        //     $this->db->bind(4 ,$model['salary']);
-        //     $this->db->bind(5 ,$model['depot']);
-        //     $this->db->bind(6 ,$model['CIN']);
-        //     $this->db->bind(7 ,$model['phone']);
-        //     $this->db->bind(8 ,$model['email']);
-        //     $this->db->bind(9 ,$model['password']);
-        //     try{
-        //         $this->db->execute();
-        //     }
-        //     catch(Exception $e){
-        //         return $e->getMessage();
-        //     }
-        // }
+        public function selectAll($table)
+        {
+            $this->db->query("SELECT * FROM $table");
+            return $this->db->resultSet();
+        }
+        
+        
+        public function get_allcategure(){
+            $this->db->query("SELECT * FROM `categures`");
+            return $this->db->resultSet();
+        }
+
+
+
     }
 
 ?>

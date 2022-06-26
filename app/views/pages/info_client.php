@@ -21,7 +21,7 @@ require_once APPROOT.'/views/inc/head.php';
                 
                 <div class="container d-flex  align-items-center  justify-content-center">
 
-                    <form class="w-100 p-4 d-flex flex-column align-items-center  " method="POST" action="<?php echo URLROOT ?>/LoginController/updateclient_entre_info">
+                    <form class="w-100 p-4 d-flex flex-column align-items-center  " method="POST" action="<?php echo URLROOT ?>/CommandeController/add_commande">
                             
                             <div class="mb-3 w-100">
                                 <label for="exampleInputPassword1" class="form-label">address</label>

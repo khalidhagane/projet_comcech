@@ -1,6 +1,7 @@
 <?php
   class Pages extends Controller {
-    public function __construct(){
+    public function __construct()
+    {
       $this->produitModel = $this->model('ProduitModel');
       $this->commandeModel = $this->model('CommandeModel');
       $this->categureModel = $this->model('CategureModel');
@@ -8,141 +9,104 @@
       $this->loginModel = $this->model('LoginModel');
       $this->detailproduitModel = $this->model('DetailproduitModel');
       $this->panierModel = $this->model('PanierModel'); 
-
-
-      
-
+       
     }
     
-    public function index(){
-      // $data = [
-      //   'title' => 'TraversyMVC',
-      // ];
+    public function index()
+    {
        $dataList =  $this->produitModel->affichage_promotion();
        $data =  $this->categureModel->affichage_categure();
      
-      $this->view('pages/index', $data , $dataList );
+       $this->view('pages/index', $data , $dataList );
     }
    
     
 
-    public function signin(){
-      $data = [
-        'errorR' => 'this is required',
-      ];
-     
-      $this->view('pages/signin', $data);
+    public function signin()
+    {
+      $this->view('pages/signin');
     }
 
-    public function signup(){
-      $data = [
-        'title' => 'TraversyMVC',
-      ];
-     
-      $this->view('pages/signup', $data);
+    public function signup()
+    {   
+      $this->view('pages/signup');
     }
 
-    public function dashbord(){
-      $data = [
-        'title' => 'TraversyMVC',
-      ];
+    public function dashbord()
+    {
       //  $data=$this->produitModel->affichage_count();
       if($_SESSION['role'] == 'admin'){
      
-      $this->view('pages/dashbord', $data);
-    }else{
-      redirect("/pages/index");
-  }
+      $this->view('pages/dashbord');
+      }else{
+        redirect("/pages/index");
+      }
     }
 
-    public function produits(){
+    public function produits()
+    {
       $data=$this->produitModel->affichage_produit();
-     
       $this->view('pages/produits', $data);
-      
     }
 
-    public function one_produit(){
-      // $data = [
-      //   'title' => 'TraversyMVC',
-      // ];
+    public function one_produit($id)
+    {
       $data =  $this->detailproduitModel->affichagedetail_produit($id);
-     
       $this->view('pages/one_produit', $data);
     }
 
-    public function table_produits(){
-      // $data = [
-      //   'title' => 'TraversyMVC',
-      // ];
+    public function table_produits()
+    {
       if($_SESSION['role'] == 'admin'){
-      $data =  $this->produitModel->affichage_produit();
-        
-        $this->view('pages/table_produits', $data);
+          $data =  $this->produitModel->affichage_produit();
+          $this->view('pages/table_produits', $data);
       }else{
-        redirect("/pages/index");
-    }
+          redirect("/pages/index");
+      }
     }
 
-
-    public function table_commandes(){
-      // $data = [
-      //   'title' => 'TraversyMVC',
-      // ];
+    public function table_commandes()
+    {
       if($_SESSION['role'] == 'admin'){
       $data =  $this->commandeModel->affichage_commande();
-    }else{
-      redirect("/pages/index");
-  }
-        
       $this->view('pages/table_commandes', $data);
+      }else{
+        redirect("/pages/index");
+      }
     }
 
-    
-
-    public function panier(){
+    public function panier()
+    {
       if(!empty($_SESSION['id'])){
-      $data = $this->panierModel->affichage_produits();
-      // echo '<pre>';
-      // var_dump($data);
-      // echo '</pre>';
-
-      $this->view('pages/panier', $data);
+        $data = $this->panierModel->affichage_produits();
+        $this->view('pages/panier', $data);
       }else{
         redirect("/pages/signin");
       }
     }
     
-    
-
-    public function table_commantair(){
-      // $data = [
-      //   'title' => 'TraversyMVC namir',
-      // ];
-     
-      $this->view('pages/table_commantair', $data);
+    public function table_commantair()
+    {
+      $this->view('pages/table_commantair');
     }
 
-    public function ajoute_produit(){
-      // $data = [
-      //   'title' => 'TraversyMVC samir',
-      // ];
+    public function ajoute_produit()
+    {
       if($_SESSION['role'] == 'admin'){
-      $this->view('pages/ajoute_produit');
-    }else{
-
-      redirect("/pages/index");
-  }
+       
+        $this->view('pages/ajoute_produit',$data);
+      }else{
+        redirect("/pages/index");
+      }
     }
 
-    public function update_produit(){
-      $data = [
-        'title' => 'update Produit'
-      ];
+    public function update_produit()
+    {
       if($_SESSION['role'] == 'admin'){
-      $this->view('pages/update_produit', $data);
-    }else{
-      redirect("/pages/index");
+        
+        $this->view('pages/update_produit', $data);
+      }else{
+        redirect("/pages/index");
   }
     }
 
@@ -157,24 +121,9 @@
   }
     }
 
-    public function info_client(){
-      $data = [
-        'title' => 'update Produit'
-      ];
-
-      $this->view('pages/info_client', $data);
-    }
-
-    public function ajoute_categure(){
-      $data = [
-        'title' => 'update Produit'
-      ];
-      
-      if($_SESSION['role'] == 'admin'){
-      $this->view('pages/ajoute_categure', $data);
-    }else{
-      redirect("/pages/index");
-  }
+    public function info_client()
+    {
+      $this->view('pages/info_client');
     }
   
     public function table_categure(){
@@ -191,7 +140,13 @@
       
     }
 
+    public function ajoute_categure()
+    {
+      if($_SESSION['role'] == 'admin'){
+        $this->view('pages/ajoute_categure');
+      }else{
+        redirect("/pages/index");
+      }
+    }
     
-
-
   }

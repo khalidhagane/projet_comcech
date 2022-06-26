@@ -4,6 +4,7 @@ class CommandeController extends Controller{
     function __construct(){
 
         $this->commandeModel = $this->model('CommandeModel'); 
+        $this->loginModel= $this->model('LoginModel');
     }
 
     function affichage_commande(){
@@ -21,6 +22,8 @@ class CommandeController extends Controller{
     }
 
     public function add_commande(){
+        $data=$_POST;
+        $data=$this->loginModel->updateclient_entre_info($data,$_SESSION['id']);
         $this->commandeModel->add_commande();
         $this->commandeModel->delete_produit_panier_commande();
         redirect("/pages/produits");

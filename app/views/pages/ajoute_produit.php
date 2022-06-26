@@ -38,40 +38,40 @@ require_once APPROOT.'/views/inc/head.php';
 
                             <form method="POST" action="<?php echo URLROOT ?>/ProduitController/addProduit" enctype="multipart/form-data" >
                                     <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">image</label>
+                                        <label for="exampleInputEmail1" class="form-label">Image</label>
                                         <input type="file" name="image" class="form-control" id="exampleInputEmail1" >
                                         
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label"> name produit</label>
+                                        <label for="exampleInputPassword1" class="form-label">Produit</label>
                                         <input type="text" name="produit"  class="form-control" id="exampleInputPassword1">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">poid</label>
+                                        <label for="exampleInputPassword1" class="form-label">Poid</label>
                                         <input type="number" name="poid"  class="form-control" id="exampleInputPassword1">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">tension</label>
+                                        <label for="exampleInputPassword1" class="form-label">Tension</label>
                                         <input type="number" name="tension"  class="form-control" id="exampleInputPassword1">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">puissance</label>
+                                        <label for="exampleInputPassword1" class="form-label">Puissance</label>
                                         <input type="number" name="puissance"  class="form-control" id="exampleInputPassword1">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">longueur</label>
+                                        <label for="exampleInputPassword1" class="form-label">Longueur</label>
                                         <input type="number" name="longueur"  class="form-control" id="exampleInputPassword1">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">prix</label>
+                                        <label for="exampleInputPassword1" class="form-label">Prix</label>
                                         <input type="number" name="prix"  class="form-control" id="exampleInputPassword1">
                                     </div>
                                     <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">description</label>
+                                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
                                     <textarea class="form-control" type="text" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
                                     </div>
-                                    <div class="mb-3 form-check">
-                                    <select id="categure" name="promotion">
+                                    <div class="mb-3">
+                                    <select id="categure" class="form-control" name="promotion">
                                     <option value="nopromotion" checked>no promotion</option>
                                     <option value="promotion">promotion</option>
                                     
@@ -81,16 +81,12 @@ require_once APPROOT.'/views/inc/head.php';
                                         <label for="exampleInputPassword1" class="form-label">prix 2</label>
                                         <input type="number" name="prix2"  class="form-control" id="exampleInputPassword1">
                                     </div>
-                                    <div>
-                                    <select id="categure" name="categure">
-                                    <option value="soudage">Outils de soudage</option>
-                                    <option value="moteur">Moteur éléctrogéne</option>
-                                    <option value="compreseure" selected>Aire compréseure</option>
-                                    <option value="echelle">les échelle</option>
-                                    <option value="Echafoudage">Echafoudage metalique</option>
-                                    <option value="massonié">Outille de massonié</option>
+
+                                    <select id="categure" name="categure" class="mb-3 form-control">
+                                        <?php foreach($data as $categorie): ?>
+                                            <option><?=$categorie->categure?></option>
+                                        <?php endforeach?>
                                     </select>
-                                    </div>
 
                                     <input type="submit" name="submit"  class="btn btn-primary" value="submit">
                             </form>

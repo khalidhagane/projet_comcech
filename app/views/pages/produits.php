@@ -28,7 +28,7 @@ require_once APPROOT.'/views/inc/navbar.php';
                                                 foreach($data as $produit){
                                                     ?>
 
-            <a href="<?=URLROOT?>/DetailproduitController/affichagedetail_produit/<?php echo $produit->id?>" class="text-decoration-none col-ms-11  col-md-5 col-lg-3  p-0 card  border-0 shadow gap-3  d-flex flex-column align-items-center   ">
+            <a href="<?=URLROOT?>/Pages/one_produit/<?php echo $produit->id?>" class="text-decoration-none col-ms-11  col-md-5 col-lg-3  p-0 card  border-0 shadow gap-3  d-flex flex-column align-items-center   ">
                 
                 <img  class="h-50 w-75 pt-3" src="<?php echo URLROOT ?>/public/img/image_produit/<?php echo $produit->image ?>" alt="img">
                 

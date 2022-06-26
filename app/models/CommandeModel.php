@@ -19,7 +19,7 @@ public function add_commande(){
     $id_user=$_SESSION['id'];
     
     $this->db->query("INSERT INTO commandes (produit,quantite,address,phone,prix,name) SELECT pr.produit, p.quantite, c.address, c.phone, pr.prix,c.username
-         FROM copmtes c, paniers p, produits pr 
+         FROM comptes c, paniers p, produits pr 
          WHERE c.id = $id_user 
              AND p.id_user = $id_user 
              AND pr.id = p.id_produit");

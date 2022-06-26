@@ -38,52 +38,20 @@ require_once APPROOT.'/views/inc/head.php';
 
                             <form method="POST" action="<?php echo URLROOT ?>/CategureController/update_categure/<?= $data['id']; ?>"  enctype="multipart/form-data">
                                     <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">image</label>
+                                        <label for="exampleInputEmail1" class="form-label">Image</label>
                                         <input type="file" name="image" class="form-control" value='<?php echo $data['image']; ?>'  id="exampleInputEmail1" >
                                         
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label"> name produit</label>
-                                        <input type="text" name="produit"  class="form-control" value='<?php echo $data['produit']; ?>'  id="exampleInputPassword1">
+                                        <label for="exampleInputPassword1" class="form-label"> Categorie</label>
+                                        <input type="text" name="categure"  class="form-control" value='<?php echo $data['categure']; ?>'  id="exampleInputPassword1">
                                     </div>
-                                    <!-- <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">poid</label>
-                                        <input type="number" name="poid"  class="form-control" value='<?php echo $data['poid']; ?>'  id="exampleInputPassword1">
-                                    </div>
+                                    
                                     <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">tension</label>
-                                        <input type="number" name="tension"  class="form-control" value='<?php echo $data['tension']; ?>'  id="exampleInputPassword1">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">puissance</label>
-                                        <input type="number" name="puissance"  class="form-control" value='<?php echo $data['puissance']; ?>'  id="exampleInputPassword1">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">longueur</label>
-                                        <input type="number" name="longueur"  class="form-control" value='<?php echo $data['longueur']; ?>'  id="exampleInputPassword1">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">prix</label>
-                                        <input type="number" name="prix"  class="form-control" value='<?php echo $data['prix']; ?>'  id="exampleInputPassword1">
-                                    </div> -->
-                                    <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">description</label>
+                                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
                                     <textarea class="form-control" type="text" name="description"  value='' id="exampleFormControlTextarea1" rows="3"><?php echo $data['description']; ?></textarea>
                                     </div>
-                                    <!-- <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                    </div> -->
-                                    <div>
-                                    <select id="categure" name="categure">
-                                    <option value="soudage">Outélle de soudage</option>
-                                    <option value="moteur">Moteur éléctrogéne</option>
-                                    <option value="compreseure" selected>Aire compréseure</option>
-                                    <option value="echelle">les échelle</option>
-                                    <option value="Echafoudage">Echafoudage metalique</option>
-                                    <option value="massonié">Outille de massonié</option>
-                                    </select>
-                                    </div>
+                                
                                     <input type="submit" name="submit"  class="btn btn-primary" value="submit">
                             </form>
 

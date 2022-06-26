@@ -24,7 +24,26 @@ require_once APPROOT.'/views/inc/navbar.php';
             <form method="POST" action="<?= URLROOT ?>/LoginController/signin" class="card border-0 w-50 form-signup d-flex p-2  px-md-5">
             
                     <span class="fs-2 text-center pb-4">SIGN IN</span>
-                    
+                    <?php
+                    if(isset($_SESSION['error_empty'])){
+                        echo "<div class='alert alert-danger alert-dismissible fade show ' role='alert'>".$_SESSION['error_empty']."
+    
+    
+                                <button type='button' class='btn-close m-auto' data-bs-dismiss='alert'>
+                                </button>
+                        </div>";
+                        unset($_SESSION['error_empty']);
+                    }
+                    if(isset($_SESSION['error_wrong'])){
+                        echo "<div class='alert alert-danger alert-dismissible fade show ' role='alert'>".$_SESSION['error_wrong']."
+    
+    
+                                <button type='button' class='btn-close m-auto' data-bs-dismiss='alert'>
+                                </button>
+                        </div>";
+                        unset($_SESSION['error_wrong']);
+                    }  
+                    ?>
                 
                 <div class="mb-3">
                     <input type="text" name="email_phone" class="form-control" id="text" placeholder="Email ou Telephone"  >

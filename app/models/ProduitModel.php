@@ -7,7 +7,7 @@
        $this->db = new Database();
    }
         public function addProduit($data){
-            var_dump($data);
+            
             
             $this->db->query("INSERT INTO `produits`( `image`,`produit`, `poid`, `tension`, `puissance`, `longueur`, `prix` , `description`,`promotion`,`prix2`,`categure`)
              VALUES (?,?,?,?,?,?,?,?,?,?,?)");
@@ -84,13 +84,6 @@
                 return $e->getMessage();
             }
         }
-
-        // public function affichage_count(){
-        //     $this->db->query("SELECT * FROM `produits`");
-        //     return $this->db->resultSet();
-        
-        // }
-
 
     }
 

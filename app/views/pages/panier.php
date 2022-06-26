@@ -65,7 +65,7 @@ require_once APPROOT.'/views/inc/navbar.php';
                 </div>
                 <hr class="my-3" >
                 <div  class="d-flex justify-content-center ">
-                    <a href="<?=URLROOT?>/CommandeController/add_commande/" type="button" class="btn btn-border-comcech btn-outline-primary  px-5 ">commander</a>
+                    <a href="<?=URLROOT?>/Pages/info_client" type="button" class="btn btn-border-comcech btn-outline-primary  px-5 ">commander</a>
                     
                 </div>
             </div>
