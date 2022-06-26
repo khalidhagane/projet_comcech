@@ -22,7 +22,7 @@
                         <a class="nav-link  dropdown-toggle text-dark hover-navbar " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class=" fas fa-list-alt me-1"></i>Produits</a>
 
                         <ul class="dropdown-menu drop-navbar  " aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item  fw-bolder text-white hover-drop" href="<?=URLROOT?>/pages/produits">Produits</a></li>
+                        <li><a class="dropdown-item  fw-bolder text-white hover-drop" href="<?=URLROOT?>/pages/produits_glopale">Produits</a></li>
                             <li><a class="dropdown-item fw-bolder text-white hover-drop" href="#">Outélle de soudage</a></li>
                             <li><a class="dropdown-item  fw-bolder text-white hover-drop" href="#">Moteur éléctrogéne</a></li>
                             <li><a class="dropdown-item  fw-bolder text-white hover-drop" href="#">Aire compréseure</a></li>

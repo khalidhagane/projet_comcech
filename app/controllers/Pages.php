@@ -5,7 +5,6 @@
       $this->produitModel = $this->model('ProduitModel');
       $this->commandeModel = $this->model('CommandeModel');
       $this->categureModel = $this->model('CategureModel');
-      // $this->promotionModel = $this->model('PromotionModel');
       $this->loginModel = $this->model('LoginModel');
       $this->detailproduitModel = $this->model('DetailproduitModel');
       $this->panierModel = $this->model('PanierModel'); 
@@ -34,7 +33,7 @@
 
     public function dashbord()
     {
-      //  $data=$this->produitModel->affichage_count();
+      
       if($_SESSION['role'] == 'admin'){
      
       $this->view('pages/dashbord');
@@ -42,15 +41,25 @@
         redirect("/pages/index");
       }
     }
-
-    public function produits()
+    public function produits_glopale()
     {
-      $data=$this->produitModel->affichage_produit();
+      // $data =  $this->categureModel->affichage_groupeproduit($categure);
+      
+       $data=$this->produitModel->affichage_produit();
+      $this->view('pages/produits_glopale', $data);
+    }
+
+    public function produits($categure)
+    {
+      $data =  $this->categureModel->affichage_groupeproduit($categure);
+      
+      // $data=$this->produitModel->affichage_produit();
       $this->view('pages/produits', $data);
     }
 
     public function one_produit($id)
     {
+      
       $data =  $this->detailproduitModel->affichagedetail_produit($id);
       $this->view('pages/one_produit', $data);
     }
@@ -93,7 +102,7 @@
     public function ajoute_produit()
     {
       if($_SESSION['role'] == 'admin'){
-       
+        $data =  $this->categureModel->affichage_categure();
         $this->view('pages/ajoute_produit',$data);
       }else{
         redirect("/pages/index");
@@ -103,6 +112,7 @@
     public function update_produit()
     {
       if($_SESSION['role'] == 'admin'){
+        $data =  $this->categureModel->affichage_categure();
         
         $this->view('pages/update_produit', $data);
       }else{
@@ -111,9 +121,9 @@
     }
 
     public function update_categure(){
-      $data = [
-        'title' => 'update categure'
-      ];
+      // $data = [
+      //   'title' => 'update categure'
+      // ];
       if($_SESSION['role'] == 'admin'){
       $this->view('pages/update_categure', $data);
     }else{

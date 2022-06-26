@@ -66,7 +66,7 @@ require_once APPROOT.'/views/inc/navbar.php';
         <?php
                                         foreach($dataList as $produit){
                                             ?>
-        <a href="<?=URLROOT?>/DetailproduitController/affichagedetail_produit/<?php echo $produit->id?>" class="text-decoration-none col-sm-12 border-0 shadow col-lg-5 p-2 card d-flex flex-row align-items-center " style=" background: linear-gradient(-0.58deg, #02ACDF -20.73%, #FFFFFF 70.84%);  " >
+        <a href="<?=URLROOT?>/pages/one_produit/<?php echo $produit->id?>" class="text-decoration-none col-sm-12 border-0 shadow col-lg-5 p-2 card d-flex flex-row align-items-center " style=" background: linear-gradient(-0.58deg, #02ACDF -20.73%, #FFFFFF 70.84%);  " >
             
             
             <!-- <img class="h-75 w-25" src="<?=URLROOT?>/img/images/groupe.png" alt="" > -->
@@ -76,7 +76,7 @@ require_once APPROOT.'/views/inc/navbar.php';
             
                         
                         <div class="d-flex flex-column ps-2">
-                            <p class="fs-3 text-center text-dark"><?= $produit->description ?></p>
+                            <p class="fs-3 text-center text-dark "><?= $produit->description ?></p>
                             <span class= "fs-2 text-white text-center "><?= $produit->prix ?> MAD</span>
                             <span class="fs-5  text-secondary text-decoration-line-through "><?= $produit->prix2 ?> MAD</span>
                         </div>
@@ -253,10 +253,10 @@ require_once APPROOT.'/views/inc/navbar.php';
                     <div class="d-flex flex-column justify-content-between col-ms-11  col-md-5 col-lg-3  p-0 card  border-0 shadow gap-3  ">
                         <img class="h-50 w-100 rounded-top " src="<?php echo URLROOT ?>/public/img/categure_img/<?php echo $produit->image ?>" alt="">
                         <div class="px-2 ">
-                            <h3 class=""><?php echo $produit->categure?></h3>
+                            <h3 class="text-center"><?php echo $produit->categure?></h3>
                             <p class="mb-2"> <?php echo $produit->description?></p>
                         </div >
-                        <a href="<?=URLROOT?>/CategureController/affichage_groupeproduit/<?php echo $produit->categure?>"  class="btn btn-border-comcech btn-outline-primary fw-bolder rounded-0 border-0 border-top "> Voir plus <i class="fas fa-arrow-right"></i></a>
+                        <a href="<?=URLROOT?>/pages/produits/<?php echo $produit->categure?>"  class="btn btn-border-comcech btn-outline-primary fw-bolder rounded-0 border-0 border-top "> Voir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <?php }?> 
             </div>

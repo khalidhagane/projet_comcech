@@ -15,5 +15,4 @@ public function affichagedetail_produit($id){
     
 }
 
-
 }

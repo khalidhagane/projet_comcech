@@ -25,9 +25,7 @@ class CategureController extends Controller{
 
     public function affichage_categure_produit(){
         
-        
         $produit =  $this->categureModel->affichage_categure();
-        
         
         $this->view('pages/ajoute_produit', (array) $produit);
    }
@@ -55,13 +53,13 @@ class CategureController extends Controller{
          }
         }
 
-        // public function affichage_groupeproduit($categure){
+        public function affichage_groupeproduit($categure){
    
-        //     $data =  $this->categureModel->affichage_groupeproduit($categure);
+            $data =  $this->categureModel->affichage_groupeproduit($categure);
             
-        //     $this->view("/pages/produits",$data);
+            $this->view("/pages/produits",$data);
            
-        // }
+        }
        
         
 }
