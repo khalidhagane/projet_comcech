@@ -10,7 +10,7 @@ require_once APPROOT.'/views/inc/navbar.php';
     <div class=" card w-md-50 w-lg-50 h-75 w-sm-100  d-flex justify-content-center align-items-center flex-row flex-wrap  border-0 shadow py-4 ">
         <div class=" w-50 d-flex flex-column justify-content-center align-items-center">
 
-            <img  class=" pb-3 pb-lg-0 " src="<?php echo URLROOT ?>/public/img/image_produit/<?php echo $data->image ?>"src="<?=URLROOT?>/img/images/groupe.png" alt="photo" style="width: 400px ; height:300px   ">
+            <img  class=" pb-3 pb-lg-0 pe-5 " src="<?php echo URLROOT ?>/public/img/image_produit/<?php echo $data->image ?>"src="<?=URLROOT?>/img/images/groupe.png" alt="photo" style="width: 400px ; height:300px   ">
 
         </div>
         <div> 

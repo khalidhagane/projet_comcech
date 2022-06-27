@@ -5,7 +5,6 @@ class ProduitController extends Controller{
         $this->produitModel = $this->model('ProduitModel'); 
         $this->categureModel = $this->model('CategureModel'); 
     }
-
     
     public function addProduit(){
 
@@ -13,12 +12,8 @@ class ProduitController extends Controller{
         $data = $_POST;
         $target_img = dirname(APPROOT) . "/public/img/image_produit/" . $_FILES['image']['name'];
         move_uploaded_file($_FILES['image']['tmp_name'], $target_img);
-    
-        
-        // $img = ($_FILES['image']['name']);
         
         $this->produitModel->addProduit($data);
-
        
         redirect("/pages/table_produits");
     }

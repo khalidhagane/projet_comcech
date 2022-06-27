@@ -12,20 +12,19 @@ let errorP2 = document.querySelector('.errorP2');
 let errorPss = document.querySelector('.errorPss');
 
 let usernameRegex =/^[a-zA-Z\s]*$/;
-let emailRegex = /^([a-zA-Z][A-Za-z0-9-_.]+@(gmail|outlook|yahoo).(com|fr|net))|^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/;
-
+let emailRegex = /^[a-zA-Z][A-Za-z0-9-_.]+@(gmail|outlook|yahoo).(com|fr|net)/;
 let passwordRegex = /[A-Za-z]{6,16}[0-9]{2,16}$/;
 
 form.addEventListener('submit',function(e){
 
     if(username.value == ""){
         
-        errorU.innerHTML="le champs username est requis.";
+        errorU.innerHTML="Le champs username est requis.";
         errorU.style.color='red';
         e.preventDefault();
     }
     else if(!usernameRegex.test(username.value)){
-        errorU.innerHTML="Please enter 3 to 15 characters.";
+        errorU.innerHTML="L'username doit contenir que des lettres";
         errorU.style.color='red';
         e.preventDefault();
 
@@ -36,12 +35,12 @@ form.addEventListener('submit',function(e){
 
     if(email.value.trim()==""){
         
-        errorE.innerText="le champs email est requis.";
+        errorE.innerText="Le champs email est requis.";
         errorE.style.color='red';
         e.preventDefault();
     }
     else if(!emailRegex.test(email.value)){
-        errorE.innerHTML="error email must be example@gmail.";
+        errorE.innerHTML="Merci de saisir un email valid";
         errorE.style.color='red';
         e.preventDefault();
     }
@@ -51,12 +50,12 @@ form.addEventListener('submit',function(e){
 
     if(password1.value.trim()==""){
         
-        errorP1.innerHTML="le champs password est requis.";
+        errorP1.innerHTML="Le champs password est requis.";
         errorP1.style.color='red';
         e.preventDefault();
     }
     else if(!passwordRegex.test(password1.value)){
-        errorP1.innerHTML = 'Format password not valid'; 
+        errorP1.innerHTML = 'Le mot de passe doit contenir que des lettres et des chiffres'; 
         errorP1.style.color='red';
         e.preventDefault();
 
@@ -67,12 +66,12 @@ form.addEventListener('submit',function(e){
 
     if(password2.value.trim()==""){
         
-        errorP2.innerHTML="le champs password est requis.";
+        errorP2.innerHTML="Le champs password est requis.";
         errorP2.style.color='red';
         e.preventDefault();
     }
     else if(!passwordRegex.test(password2.value)){
-        errorP2.innerHTML='Password must have at least <ul><li class="text-danger">One special character !@#$%/|^&*</li><li class="text-danger">One digit(0-9)</li><li class="text-danger">One uppercase (A-Z)</li><li class="text-danger">One lowercase(a-z)</li>';
+        errorP2.innerHTML='';
         errorP2.style.color='red';
         e.preventDefault();
 
@@ -81,7 +80,7 @@ form.addEventListener('submit',function(e){
         errorP2.innerHTML="";}
 
     if(password1.value!==password2.value){
-        errorPss.innerHTML="password aren't match.";
+        errorPss.innerHTML="Les deux mot de passe ne correspondent pas.";
         errorPss.style.color='red';
         e.preventDefault();
         

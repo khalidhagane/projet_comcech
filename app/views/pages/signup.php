@@ -22,7 +22,7 @@ require_once APPROOT.'/views/inc/navbar.php';
             <form method="POST" id="form" action="<?= URLROOT ?>/LoginController/addclient_signup" class="card border-0 w-50 form-signup d-flex p-2 px-md-5">
 
                     <span class="fs-2 text-center pb-4">SIGN UP</span>
-                    <span class="errorPss" ></span><!--js-->
+                    
 
                 <div class="mb-3 ">
                     <input type="text" name="username" class="form-control  " id="username" placeholder="Username" >
@@ -41,6 +41,7 @@ require_once APPROOT.'/views/inc/navbar.php';
                 <div class="mb-3">
                     <input type="password" name="password2" class="form-control" id="password2" placeholder=" Password" >
                     <span class="errorP2" ></span><!--js-->
+                    <span class="errorPss" ></span><!--js-->
                     
                 </div>
                 <div class="mb-3 form-check">

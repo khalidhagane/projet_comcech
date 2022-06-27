@@ -26,79 +26,10 @@ class LoginController extends Controller{
     
         $this->loginModel->addclient_signup($data);
         
-
         redirect("/pages/signin"); 
 
     }
     
-    // public function signi()
-    // {
-
-    //     if(isset($_POST['submit']))
-    //     {
-    //         $compte = $_POST;
-
-    //         if(empty($compte['password']) && empty($compte['email_phone']))
-    //         {
-    //             $this->view("/pages/signin");
-    //             // echo "3afak 3amar hadchi";
-
-    //         }
-    //         else
-    //         {
-               
-    //         $data = $this->loginModel->verify_compt($compte);
-    //             if(isset($data))
-    //             {
-
-    //                 if(isset($data->email_phone) == $compte['email_phone'] && $data->password1 == $compte['password'])
-    //                 {
-                        
-    //                         $_SESSION['username'] = $data->username;
-    //                         $_SESSION['id'] = $data->id;
-    //                         $_SESSION['role'] = $data->role;
-    //                         $_SESSION['address'] = $data->address;
-    //                         $_SESSION['phone'] = $data->phone;
-
-    //                         if(isset($_SESSION['role'])== $data->role){
-                     
-    //                             $this->view("/pages/dashbord");
-    //                             exit;
-    //                         }
-    //                         else if($_SESSION['phone'] == "" && $_SESSION['address'] == ""){
-    //                             // $this->view("/pages/produits",$data);
-    //                             $this->view("/pages/info_client");
-    //                         }else{
-                                
-    //                             redirect("/pages/produits");
-    //                         }
-    //                 }
-    //                 else
-    //                 {
-    //                     $this->view("/pages/signin");
-    //                     echo"emal et passwod ghaltin";
-    //                 }
-    //             }
-    //             else
-    //             {
-                    
-    //                 $this->view("/pages/signin");
-    //                 echo"emal et passwod khawyin";
-                    
-    //             }
-    //         }
-    //     }
-    //     else
-    //     {
-            
-    //         $this->view("/pages/signin");
-    //         echo"emal et passwod khawyin";
-                        
-    //     }
-
-    // }
-
-
     public function signin()
     {
         if(isset($_POST['submit'])){
@@ -141,9 +72,6 @@ class LoginController extends Controller{
         }
     }
 
-
-
-
     public function updateclient_entre_info()
     {
         
@@ -157,7 +85,6 @@ class LoginController extends Controller{
         session_destroy();
         redirect("/pages/index");
         
-
     }
 
 }
